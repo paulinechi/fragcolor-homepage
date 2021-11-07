@@ -1,0 +1,267 @@
+.team-page-member-sec {
+    width: 24vw;
+    height: 37vw;
+    // border: 1px solid white;
+
+    /* Auto Layout */
+    background: linear-gradient(#000, #000) padding-box,
+        linear-gradient(
+                70.71deg,
+                #8f67e2 -11.82%,
+                #7d89e5 2.93%,
+                #6aace9 20.96%,
+                #5ec1eb 35.76%,
+                #5ac9ec 45.4%,
+                #51eabd 103.27%
+            )
+            border-box;
+
+    color: white;
+
+    display: inline;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    margin: 1.3vw;
+
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+    font-family: "Sora", sans-serif !important;
+}
+
+.team-page h1 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+
+    background-image: linear-gradient(
+        70.71deg,
+        #8f67e2 -11.82%,
+        #7d89e5 2.93%,
+        #6aace9 20.96%,
+        #5ec1eb 35.76%,
+        #5ac9ec 45.4%,
+        #51eabd 103.27%
+    );
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-page-description {
+    width: 48vw;
+    height: 192px;
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vw;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.team-page-about {
+    margin-top: 8vw;
+}
+
+.team-page-members {
+    color: white;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-page-member-sec-pic {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+}
+
+.team-page-member-sec h4 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 1vw;
+}
+
+.team-page-member-sec p {
+    font-size: 14px;
+    line-height: 24px;
+    width: 16vw;
+    height: 8vw;
+}
+
+#core-contributors {
+    margin-bottom: 3vw;
+    margin-top: 3vw;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+}
+
+.team-page-advisors {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#advisors {
+    margin-top: 10vw;
+    margin-bottom: 3vw;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+}
+
+
+.team-page-advisor-sec {
+    width: 17.4vw;
+    height: 29vw;
+    // border: 1px solid white;
+
+    /* Auto Layout */
+    background: linear-gradient(#000, #000) padding-box,
+        linear-gradient(
+                70.71deg,
+                #8f67e2 -11.82%,
+                #7d89e5 2.93%,
+                #6aace9 20.96%,
+                #5ec1eb 35.76%,
+                #5ac9ec 45.4%,
+                #51eabd 103.27%
+            )
+            border-box;
+
+    color: white;
+
+    display: inline;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8vw;
+    margin: 1.3vw;
+
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+    font-family: "Sora", sans-serif !important;
+}
+
+.team-page-advisor-sec-pic {
+    width: 15.4vw;
+    height: 14.3vw;
+    object-fit: cover;
+
+}
+
+.team-page-advisor-sec p {
+    height: 11vw;
+}
+
+.team-page-advisor-sec h4 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 1vw;
+}
+
+.team-page-advisor-sec p {
+    font-size: 14px;
+    line-height: 24px;
+    width: 16vw;
+    height: 8vw;
+}
+
+
+.team-page-investors h1 {
+    margin-top: 10vw;
+    margin-bottom: 3vw;
+
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+}
+
+.team-page-investor-logo {
+    // width: 24vw;
+    height: 7vw;
+    // border: 1px solid white;
+
+    /* Auto Layout */
+    background: linear-gradient(#000, #000) padding-box,
+        linear-gradient(
+                70.71deg,
+                #8f67e2 -11.82%,
+                #7d89e5 2.93%,
+                #6aace9 20.96%,
+                #5ec1eb 35.76%,
+                #5ac9ec 45.4%,
+                #51eabd 103.27%
+            )
+            border-box;
+
+    color: white;
+
+    display: inline;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+    margin: 0.5vw;
+
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+    font-family: "Sora", sans-serif !important;
+
+    object-fit: cover;
+
+}
+
+#investor1 {
+    width: 446px;
+    height: 104px;
+    padding: 20px;
+}
+
+#investor2 {
+    width: 20vw;
+    padding: 2vw;
+}
+
+#investor3 {
+    width: 324px;
+    padding: 22.5px;
+}
+#investor4 {
+    width: 282px;
+}
+#investor5 {
+    width: 247px;
+    padding: 18px;
+}
+#investor6 {
+    width: 184px;
+    padding: 9px 18px;
+}
+#investor7 {
+    width: 334px;
+    padding: 21px 32px;
+}
+
+.team-page-investor-holder {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.team-page-investor-holder {
+    margin-bottom: 8vw;
+}
+
+.team-page-social-icon {
+    margin-right: 2vw;
+}

@@ -6,7 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
+// const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -95,12 +95,6 @@ module.exports = ({ config, isDevelopment, buildType }) => (webpackConfig) => {
             removeAll: true,
           },
         },
-      }),
-      new ImageminPlugin({
-        disable: !config.dist.enableImageOptimization,
-        svgo: null,
-        gifsicle: null,
-        pngquant: config.dist.enablePNGQuant ? { quality: config.dist.pngQuantQuality } : null,
       }),
     );
 

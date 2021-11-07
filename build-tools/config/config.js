@@ -8,20 +8,23 @@ publicPath by using: yarn build -- --publicPath=/v/vue-skeleton/
 When you don't know the publicPath at build time, you can set `window['webpackPublicPath']` before
 loading any script in your HTML.
  */
-let publicPath = '/';
+
+// let publicPath = '.';
+let publicPath = '';
 
 if(argv.publicPath){
   publicPath = argv.publicPath;
 }
 
 // force leading /
-if (!publicPath.startsWith('/')) {
-  publicPath = `/${publicPath}`;
-}
-// force trailing /
-if (!publicPath.endsWith('/')) {
-  publicPath = `${publicPath}/`;
-}
+
+// if (!publicPath.startsWith('/')) {
+//   publicPath = `/${publicPath}`;
+// }
+// // force trailing /
+// if (!publicPath.endsWith('/')) {
+//   publicPath = `${publicPath}/`;
+// }
 
 /*
 It's also possible to override the version number during a build.
@@ -34,7 +37,9 @@ if(argv.versionNumber){
   version = argv.versionNumber;
 }
 
-const versionPath = 'version/' + version + '/';
+// const versionPath = 'version/' + version + '/';
+const versionPath = 'static/' + version + '/';
+
 
 const buildTypes = {
   DEVELOPMENT: 'development',

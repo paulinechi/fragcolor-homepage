@@ -58,6 +58,9 @@ const getRouter = () => {
     });
   }
 
+  console.log(router);
+
+
   return router;
 };
 

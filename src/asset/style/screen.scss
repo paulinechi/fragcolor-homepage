@@ -1,3 +1,21 @@
 @import '~normalize.css';
 
 @import 'layout/base';
+
+@import './header.scss';
+
+@import './descriptionSection.scss';
+
+@import './imageSection.scss';
+
+@import './../style/util/variable';
+
+@import './technologies.scss';
+
+@import './projects.scss';
+
+@import './blog.scss';
+
+@import './careers.scss';
+
+@import './team.scss';

@@ -1,14 +1,7 @@
 {
-  "name": "vue-skeleton",
-  "version": "1.10.0",
-  "skeleton": {
-    "name": "vue-skeleton",
-    "version": "1.10.0"
-  },
-  "description": "A Vue Skeleton",
-  "author": "Hendrik-Jan de Harder <hendrik-jan@mediamonks.com>",
-  "license": "MIT",
-  "private": true,
+  "name": "fragcolor-homepage",
+  "version": "1.0.0",
+  "homepage": ".",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build-tools/config/webpack/webpack.conf.dev.js",
     "build": "node build-tools/script/build.js",
@@ -23,8 +16,7 @@
     "fix:ts": "npm run lint:ts -- --fix",
     "fix:js": "npm run lint:js -- --fix",
     "fix:prettier": "prettier \"src/**/*.{js,ts,scss}\" --write",
-    "preview": "node build-tools/script/preview-server.js",
-    "preinstall": "npx use-yarn"
+    "preview": "node build-tools/script/preview-server.js"
   },
   "husky": {
     "hooks": {
@@ -34,15 +26,20 @@
   },
   "dependencies": {
     "axios": "0.19.2",
+    "bootstrap": "^5.1.0",
+    "bootstrap-vue": "^2.21.2",
     "core-js": "3.6.5",
     "detect-port": "^1.2.1",
+    "emailjs-com": "^3.2.0",
     "fetch-polyfill": "^0.8.2",
     "gsap": "^2.0.1",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.4",
     "mini-css-extract-plugin": "0.9.0",
     "modernizr": "^3.3.1",
     "normalize.css": "^8.0.0",
     "open": "^7.1.0",
+    "opn": "^6.0.0",
     "postcss-safe-parser": "^4.0.1",
     "sass": "^1.26.10",
     "seng-config": "^1.1.0",
@@ -50,6 +47,7 @@
     "seng-scss": "^1.2.5",
     "vue": "^2.2.5",
     "vue-i18n-manager": "^3.2.2",
+    "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.4.1",
     "vue-types": "^1.0.1",
     "vuex": "^3.0.1",
@@ -70,6 +68,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.0.0",
+    "@types/jquery": "^3.5.8",
     "autoprefixer": "^9.1.5",
     "awesome-typescript-loader": "^5.2.0",
     "babel-eslint": "^10.0.1",
@@ -77,7 +76,6 @@
     "babel-plugin-lodash": "^3.3.2",
     "babel-plugin-transform-builtin-extend": "^1.1.2",
     "chalk": "^4.1.0",
-    "compression": "^1.6.2",
     "connect-history-api-fallback": "^1.1.0",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^4.2.0",
@@ -98,7 +96,6 @@
     "fs-extra": "^9.0.1",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
-    "imagemin-webpack-plugin": "^2.0.0",
     "json-loader": "^0.5.7",
     "lint-staged": "^10.2.11",
     "lodash-webpack-plugin": "^0.11.4",
@@ -133,6 +130,7 @@
     "use-yarn": "^2.2.0",
     "vue-loader": "^15.0.10",
     "vue-style-loader": "^4.1.0",
+    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.2.6",
     "webpack": "^4.10.2",
     "webpack-bundle-analyzer": "^3.0.2",

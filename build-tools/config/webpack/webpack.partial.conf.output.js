@@ -4,7 +4,7 @@ module.exports = ({ config, isDevelopment }) => webpackConfig => ({
   ...webpackConfig,
   output: {
     path: path.join(config.projectRoot, 'dist'),
-    publicPath: isDevelopment ? '/' : config.dist.publicPath,
+    publicPath: isDevelopment ? '' : config.dist.publicPath,
     globalObject: 'this',
     filename: isDevelopment
       ? '[name].js'

@@ -171,36 +171,40 @@ module.exports = ({ config, isDevelopment }) => webpackConfig => {
         },
         {
           test: /\.svg$/,
-          oneOf: (() => {
-            const svgoLoaderConfig = {
-              loader: 'svgo-loader',
-              options: {
-                plugins: [
-                  { removeViewBox: false },
-                  { removeStyleElement: true },
-                  { removeComments: true },
-                  { removeDesc: true },
-                  { removeUselessDefs: true },
-                  { removeTitle: true },
-                  { removeMetadata: true },
-                  { removeComments: true },
-                  { cleanupIDs: { remove: true, prefix: '' } },
-                  { convertColors: { shorthex: false } },
-                ],
-              },
-            };
-
-            return [
-              {
-                resourceQuery: /inline/,
-                use: [{ loader: 'svg-inline-loader' }, svgoLoaderConfig],
-              },
-              {
-                use: [{ loader: 'url-loader' }, svgoLoaderConfig],
-              },
-            ];
-          })(),
+          loader: 'vue-svg-loader',
         },
+        // {
+        //   test: /\.svg$/,
+        //   oneOf: (() => {
+        //     const svgoLoaderConfig = {
+        //       loader: 'svgo-loader',
+        //       options: {
+        //         plugins: [
+        //           { removeViewBox: false },
+        //           { removeStyleElement: true },
+        //           { removeComments: true },
+        //           { removeDesc: true },
+        //           { removeUselessDefs: true },
+        //           { removeTitle: true },
+        //           { removeMetadata: true },
+        //           { removeComments: true },
+        //           { cleanupIDs: { remove: true, prefix: '' } },
+        //           { convertColors: { shorthex: false } },
+        //         ],
+        //       },
+        //     };
+
+        //     return [
+        //       {
+        //         resourceQuery: /inline/,
+        //         use: [{ loader: 'svg-inline-loader' }, svgoLoaderConfig],
+        //       },
+        //       {
+        //         use: [{ loader: 'url-loader' }, svgoLoaderConfig],
+        //       },
+        //     ];
+        //   })(),
+        // },
         /*
          * ------------------------------------------------
          * Fonts
