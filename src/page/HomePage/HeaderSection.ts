@@ -5,6 +5,17 @@ import sendEmail from '../../asset/figmaElements/popup_send_email_btn.svg';
 import popupGrid from '../../asset/figmaElements/popup_grid.svg';
 import close from '../../asset/figmaElements/Close.svg';
 import fragmentsLogo from '../../asset/figmaElements/fragments_logo_horizontal.svg';
+import threeLineMenu from '../../asset/figmaElements/three_line_menu.svg';
+
+
+import twitter from '../../asset/figmaElements/twitter.svg';
+import discord from '../../asset/figmaElements/discord.svg';
+import telegram from '../../asset/figmaElements/telegram.svg';
+import medium from '../../asset/figmaElements/medium.svg';
+import linkedIn from '../../asset/figmaElements/linkedin.svg';
+import github from '../../asset/figmaElements/github.svg';
+import angelList from '../../asset/figmaElements/AngelList_logo.svg';
+import opensea from '../../asset/figmaElements/opensea.svg';
 
 
 @Component({
@@ -18,7 +29,16 @@ import fragmentsLogo from '../../asset/figmaElements/fragments_logo_horizontal.s
     sendEmail,
     popupGrid,
     close,
-    fragmentsLogo
+    fragmentsLogo,
+    threeLineMenu,
+    twitter,
+    discord,
+    telegram,
+    medium,
+    linkedIn,
+    github,
+    angelList,
+    opensea
   },
   directives: {
     'b-modal': VBModal,
@@ -35,6 +55,8 @@ export default class HeaderSection extends Vue {
   public selectedProj: boolean = false;
   public selectedBlog: boolean = false;
   public selectedCareer: boolean = false;
+
+  public showDropDownMenu: boolean = false;
 
 
   public showPopupWindow(): void {
@@ -81,6 +103,9 @@ export default class HeaderSection extends Vue {
     }
   }
 
+  public showHideDropDownMenu(): void {
+    this.showDropDownMenu = !this.showDropDownMenu;
+  }
 
 
 }

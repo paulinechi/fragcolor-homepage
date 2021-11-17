@@ -75,17 +75,22 @@
     margin-right: auto;
 }
 
+.team-page-members-tablet {
+    display: none;
+}
+
+.team-page-advisors-tablet {
+    display: none;
+}
+
+.team-page-investors-tablet {
+    display: none;
+}
+
 .team-page-member-sec-pic {
     width: 20vw;
     height: 20vw;
     object-fit: cover;
-}
-
-.team-page-member-sec h4 {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 32px;
-    margin-top: 1vw;
 }
 
 .team-page-member-sec p {
@@ -93,6 +98,147 @@
     line-height: 24px;
     width: 16vw;
     height: 8vw;
+}
+
+@media screen and (max-width: 780px) {
+    .team-page-members {
+        display: none;
+    }
+
+    .team-page-advisors {
+        display: none;
+    }
+
+    .team-page-investor {
+        display: none;
+    }
+
+    .team-page-members-tablet {
+        display: inline-block;
+        width: 100vw;
+        // margin-left: auto;
+        // margin-right: auto;
+        margin-top: 15vw;
+    }
+
+    .team-page-advisors-tablet {
+        display: inline-block;
+        width: 100vw;
+    }
+
+    .team-page-investor-tablet {
+        display: inline-block;
+    }
+
+    .row {
+        width: 86vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .team-page-member-sec {
+        width: 40vw;
+        height: 56vw;
+    }
+
+    .team-page-member-sec p {
+        font-size: 14px;
+        line-height: 24px;
+        width: 30vw;
+        height: 8vw;
+    }
+
+    .team-page-about {
+        margin-top: 18vw !important;
+    }
+
+    .team-page-members {
+        margin-top: 20vw !important;
+    }
+
+    .team-page-member-sec-pic {
+        width: 35vw;
+        height: 30vw;
+    }
+
+    .team-page-social-icon-tablet {
+        // width: 4vw;
+        // height: 4vw;
+        // margin-right: 2vw;
+        width: 3vw;
+        height: 3vw;
+        margin-right: 2vw;
+        display: inline;
+        margin-top: 4vw;
+    }
+
+    .team-page-advisors {
+        width: 85vw !important;
+    }
+
+    #investor1 {
+        // width: 40vw !important;
+        // padding: 22.5px;
+        height: 12vw !important;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 55vw !important;
+        margin-bottom: 2vw;
+    }
+
+    #investor2 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    #investor3 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    #investor4 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    #investor5 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    #investor6 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    #investor7 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    .team-page-investor-holder {
+        width: 82vw;
+    }
+}
+
+.team-page-member-sec h4 {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    margin-top: 1vw;
 }
 
 #core-contributors {
@@ -116,7 +262,6 @@
     font-size: 40px;
     line-height: 56px;
 }
-
 
 .team-page-advisor-sec {
     width: 17.4vw;
@@ -154,7 +299,6 @@
     width: 15.4vw;
     height: 14.3vw;
     object-fit: cover;
-
 }
 
 .team-page-advisor-sec p {
@@ -174,7 +318,6 @@
     width: 16vw;
     height: 8vw;
 }
-
 
 .team-page-investors h1 {
     margin-top: 10vw;
@@ -217,51 +360,193 @@
     font-family: "Sora", sans-serif !important;
 
     object-fit: cover;
-
 }
 
 #investor1 {
-    width: 446px;
-    height: 104px;
+    // width: 446px;
+    // height: 104px;
     padding: 20px;
+
+    width: 32vw;
+    height: 10vh;
 }
 
 #investor2 {
     width: 20vw;
-    padding: 2vw;
+    padding: 1vw;
+    height: 10vh;
 }
 
 #investor3 {
-    width: 324px;
+    width: 25vw;
     padding: 22.5px;
+    height: 10vh;
 }
 #investor4 {
-    width: 282px;
+    // width: 282px;
+    width: 18vw;
+    height: 11vh;
+    padding: 1vw;
 }
 #investor5 {
-    width: 247px;
+    width: 23vw;
     padding: 18px;
+    height: 11vh;
 }
+
+#investor5 img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #investor6 {
     width: 184px;
     padding: 9px 18px;
+    height: 11vh;
+    width: 12vw;
 }
 #investor7 {
     width: 334px;
     padding: 21px 32px;
+    height: 11vh;
+    width: 23vw;
+}
+
+#investor7 img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-page-investor-holder {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-.team-page-investor-holder {
     margin-bottom: 8vw;
 }
 
 .team-page-social-icon {
     margin-right: 2vw;
+    width: 2vw;
+}
+
+@media screen and (max-width: 430px) {
+    .team-page-about {
+        margin-top: 27vw !important;
+    }
+
+    .team-page-about h1 {
+        font-size: 40px;
+    }
+
+    .team-page-description {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    .team-page-member-sec {
+        width: 82vw;
+        height: 60vh;
+        padding: 4vw;
+    }
+
+    .team-page-member-sec-pic {
+        width: 72vw;
+        height: 35vh;
+        border-radius: 8px;
+    }
+
+    .team-page-member-sec p {
+        width: 65vw;
+        height: 20vw;
+    }
+
+    .team-page .star-bg-image {
+        height: 855vh !important;
+        width: 100%;
+    }
+
+    .grid-bg-image {
+        height: 855vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .team-page-social-icon-tablet {
+        width: 5vw;
+        height: 5vw;
+        margin-right: 5vw;
+
+        margin-top: 2vw;
+    }
+
+    #investor1 {
+        width: 82vw !important;
+        height: 15vw !important;
+        padding: 2vw;
+        margin-left: 0;
+        margin-bottom: 10vw;
+    }
+
+    #investor2 {
+        width: 82vw !important;
+        height: 15vw !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+    #investor3 {
+        width: 82vw !important;
+        height: 15vw !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+    #investor5 {
+        width: 82vw !important;
+        height: auto !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+
+    #investor5 img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #investor6 {
+        width: 82vw !important;
+        height: auto !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+
+    #investor6 img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #investor7 {
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+        width: 82vw !important;
+        height: auto !important;
+    }
+
+    #investor4 {
+        width: 82vw !important;
+        height: 15vw !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+
+    .team-page-investor-logo {
+        width: 82vw !important;
+        height: 23vw !important;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
 }

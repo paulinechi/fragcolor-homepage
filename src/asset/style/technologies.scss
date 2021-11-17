@@ -8,23 +8,120 @@
     display: flex;
     font-weight: 900;
     font-size: 16px;
-    font-family: 'Sora', sans-serif !important;
-
+    font-family: "Sora", sans-serif !important;
 
     // max-width: 85vw;
     margin-left: auto;
     margin-right: auto;
 
-    background-color: #000;
-    // background-image: url('../../asset/figmaElements/background-grid.png');
-  }
+    // background-color: #000;
+    // background-image: url('../../asset/figmaElements/star_background.png');
+}
 
-.hasten {
-    height: 600px;
-    margin-top: 7vw;
+.star-bg-image {
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.team-page .star-bg-image {
+    height: 210vw !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+.grid-bg-image {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-sec .star-bg-image {
+    height: 120vh !important;
+    width: 100%;
+    object-fit: cover;
+    top: -20vh;
+    position: fixed;
+}
+
+.projects-sec .grid-bg-image {
+    position: fixed;
+    z-index: -1;
+    height: 120vh;
+    width: 100vw;
+    // -o-object-fit: cover;
+    object-fit: cover;
+    top: -20vh;
+}
+
+.technology-sec h2 {
+    width: 38vw;
+    height: 13vh;
+    top: 9vw;
+
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+
+    background-image: linear-gradient(
+        70.71deg,
+        #8f67e2 -11.82%,
+        #7d89e5 2.93%,
+        #6aace9 20.96%,
+        #5ec1eb 35.76%,
+        #5ac9ec 45.4%,
+        #51eabd 103.27%
+    );
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 }
 
+.technology-sec .star-bg-image {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-sec .star-bg-image {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+.blog-sec .grid-bg-image {
+    position: fixed;
+    z-index: -1;
+    height: 100vw;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.careers-page-sec .star-bg-image {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+.careers-page-sec .grid-bg-image {
+    height: 120vw !important;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hasten {
+    height: 600px;
+    margin-top: 2vh;
+    position: relative;
+}
 
 .chainblocks {
     height: 600px;
@@ -36,10 +133,10 @@
 
 .hasten .text {
     position: absolute;
-    width: 507px;
-    height: 376px;
-    left: 160px;
-    top: 112px;
+    width: 36vw;
+    height: 30vh;
+    left: 11.5vw;
+    top: 10.5vh;
 }
 
 .hasten .image {
@@ -51,17 +148,17 @@
     bottom: 68.17%;
 }
 
-.hasten h1{
+.hasten h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 40px !important;
     line-height: 56px;
     background-size: 100%;
     width: 150px;
-    
-    background-image: linear-gradient(90.64deg, #8758FE -12.21%, #B264FE 24.49%, #FF78FF 83.26%);
+
+    background-image: linear-gradient(90.64deg, #8758fe -12.21%, #b264fe 24.49%, #ff78ff 83.26%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
 }
 
 .chainblocks h1 {
@@ -71,10 +168,18 @@
     line-height: 56px;
     background-size: 100%;
     // width: 150px;
-    
-    background: linear-gradient(70.71deg, #8F67E2 -11.82%, #7D89E5 2.93%, #6AACE9 20.96%, #5EC1EB 35.76%, #5AC9EC 45.4%, #51EABD 103.27%);
+
+    background: linear-gradient(
+        70.71deg,
+        #8f67e2 -11.82%,
+        #7d89e5 2.93%,
+        #6aace9 20.96%,
+        #5ec1eb 35.76%,
+        #5ac9ec 45.4%,
+        #51eabd 103.27%
+    );
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
 }
 
 .clamor h1 {
@@ -84,15 +189,16 @@
     line-height: 56px;
     background-size: 100%;
     width: 150px;
-    background: linear-gradient(85.44deg, #66E7C1 18.52%, #96FF86 101.22%);
+    background: linear-gradient(85.44deg, #66e7c1 18.52%, #96ff86 101.22%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
 }
 
 .hasten h3 {
     color: white;
     font-size: 24px;
-    line-height: 40px;  
+    line-height: 40px;
+    font-weight: bold;
 }
 
 .hasten p {
@@ -101,20 +207,28 @@
     line-height: 32px;
 }
 
-
 .github-btn {
     // position: absolute;
     // top: 350px;
     margin-top: 10%;
 }
 
+.chainblocks-image {
+    // position: absolute;
+    // width: 382px;
+    // height: 364.95px;
+    // left: 177px;
+    // top: 783px;
+    position: relative;
+    width: 29vw;
+    height: 30vw;
+    left: 12vw;
+    top: 0vh;
+    display: inline;
+}
 
-.chainblocks-image{
-    position: absolute;
-    width: 382px;
-    height: 364.95px;
-    left: 177px;
-    top: 735px;
+.chainblocks-image img {
+    display: inline-block;
 }
 
 .chainblocks h1 {
@@ -130,18 +244,24 @@
 .chainblocks h3 {
     color: white;
     font-size: 24px;
-    line-height: 40px;  
+    line-height: 40px;
+    font-weight: bold;
 }
 
 .chainblocks .text {
     position: relative;
-    width: 544px;
-    height: 264px;
-    left: 736px;
-    // top: 112px;
-    margin-top: 3vw;
-}
+    // width: 544px;
+    // height: 264px;
+    // left: 25vw;
+    margin-top: 0;
+    display: inline-block;
+    // top: 8vw;
 
+    width: 40vw;
+    height: 30vh;
+    left: 26.5vw;
+    top: 10vh;
+}
 
 .clamor h1 {
     color: white;
@@ -156,21 +276,216 @@
 .clamor h3 {
     color: white;
     font-size: 24px;
-    line-height: 40px;  
+    line-height: 40px;
+    font-weight: bold;
 }
 
 .clamor .text {
+    // position: relative;
+    // width: 507px;
+    // height: 232px;
+    // left: 160px;
+    // top: 66px;
     position: relative;
     width: 507px;
     height: 232px;
     left: 160px;
-    top: 128px;
+    top: 66px;
+    display: inline-block;
+
+    width: 36vw;
+    height: 30vh;
+    left: 11.5vw;
+    top: 9.5vh;
 }
 
 .clamor .image {
-    position: absolute;
+    // position: absolute;
+    // width: 552px;
+    // height: 376px;
+    // left: 728px;
+    // top: 1400px;
+    position: relative;
     width: 552px;
     height: 376px;
-    left: 728px;
-    top: 1400px;
+    left: 15vw;
+    top: 15vh;
+    display: inline-block;
+}
+
+.chainblocks-image-tablet {
+    display: none;
+}
+
+#technology-intro-text {
+    color: white;
+    width: 60vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vw;
+    font-weight: bold;
+    line-height: 2.5vw;
+}
+
+@media screen and (max-width: 780px) {
+    .hasten .image {
+        position: relative;
+        left: 52vw;
+        top: 36vw;
+        width: 48vw;
+    }
+
+    .hasten .text {
+        left: 10vw;
+    }
+
+    #hasten-lines {
+        width: 373px;
+    }
+
+    .chainblocks .text {
+        left: 10vw;
+        width: 53vw;
+    }
+
+    .chainblocks-image {
+        display: none;
+    }
+
+    .chainblocks-image-tablet {
+        display: inline-block;
+        position: relative;
+        margin-left: 64vw;
+        margin-top: 1vh;
+    }
+
+    .clamor .image {
+        position: relative;
+        width: 50vw;
+        height: 40vw;
+        left: 50vw;
+        top: 3vh;
+    }
+
+    .clamor .image img {
+        width: 44vw;
+    }
+
+    .clamor .text {
+        left: 10vw;
+        top: 11vh;
+        width: 53vw;
+    }
+
+    .team-page .star-bg-image {
+        height: 540vw !important;
+    }
+
+    .grid-bg-image {
+        width: 100%;
+    }
+
+    .technology-sec h2 {
+        width: 62vw;
+        height: 24vh;
+        top: 15vw;
+    }
+
+    #technology-intro-text {
+        width: 75vw;
+        line-height: 3vh;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .technology-sec h2 {
+        width: 80vw;
+        height: 25vh;
+        top: 23vw;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 43px;
+        margin-top: 2vw;
+    }
+
+    #technology-intro-text {
+        margin-top: 12vh;
+    }
+
+    #hasten-lines {
+        display: none;
+    }
+
+    .technology-sec .star-bg-image {
+        height: 540vw !important;
+    }
+
+    .technology-sec .grid-bg-image {
+        height: 540vw !important;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .chainblocks-image-tablet {
+        display: none;
+    }
+
+    .clamor .image img {
+        display: none;
+    }
+
+    .hasten .text {
+        left: 5vw;
+        width: 90vw;
+    }
+
+    .hasten h3 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+        margin-bottom: 2vw;
+    }
+
+    .hasten {
+        height: 55vh;    
+    }
+
+    .chainblocks .text {
+        left: 5vw;
+        width: 90vw;
+    }
+
+    .chainblocks h3 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+        margin-bottom: 2vw;
+    }
+
+    .chainblocks {
+        height: 65vh;
+    }
+
+    .clamor .text {
+        left: 5vw;
+        width: 90vw;
+    }
+
+    .clamor h3 {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+        margin-bottom: 2vw;
+    }
+
+    .clamor {
+        height: 70vh;
+    }
+
+    #value-prop-grid {
+        height: 250vw;
+        width: 100vw;
+        object-fit: cover;
+    }
 }

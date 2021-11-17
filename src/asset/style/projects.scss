@@ -1,41 +1,153 @@
 #project_element_1 {
-    left: 75.66%;
-    right: 15.63%;
-    top: 10.94%;
-    bottom: 82.85%;
-    position: absolute;
+  left: 75.66%;
+  right: 15.63%;
+  top: 10.94%;
+  bottom: 82.85%;
+  position: absolute;
 }
 
 #project_element_2 {
-    position: absolute;
-    left: 55%;
-    right: 39.62%;
-    top: 13.21%;
-    bottom: 80.58%;
+  position: absolute;
+  left: 55%;
+  right: 39.62%;
+  top: 13.21%;
+  bottom: 80.58%;
 }
 
 #project_element_3 {
-    position: absolute;
-    // width: 80.15px;
-    // height: 75.89px;
-    left: 248.15px;
-    top: 773.73px;
+  position: absolute;
+  left: 18vw;
+  top: 100vh;
 }
 
 #project_element_4 {
-    position: absolute;
-    left: 465px;
-    top: 683px;
-    border-radius: 0px;
-
+  position: absolute;
+  left: 34vw;
+  top: 85vh;
+  border-radius: 0px;
 }
 
 .body {
-    display: inline-block;
-    // display: inline;
-  }
-  
+  display: inline-block;
+  // display: inline;
+}
 
+.projects-sec {
+  height: 120vh;
+}
+
+@media screen and (max-width: 780px) {
   .projects-sec {
-      height: 900px;
+    height: 180vh;
   }
+
+  #project_element_2 {
+    position: absolute;
+    left: 0%;
+    right: 39.62%;
+    top: 43.21%;
+    bottom: 80.58%;
+  }
+
+  #project_element_3 {
+    position: absolute;
+    left: 4vw;
+    top: 180vw;
+  }
+
+  #ambal-image {
+    width: 69.5vw;
+  }
+
+  #project_1 {
+    width: 70vw;
+  }
+
+  .proj-description {
+    width: 65vw;
+  }
+
+  #project_2 {
+    width: 70vw;
+    top: 90vh;
+  }
+
+  .image_holder {
+    width: 69.5vw;
+  }
+
+  #pau_infinity {
+    width: 55vw;
+  }
+
+
+}
+
+@media screen and (max-width: 430px) {
+  #project_element_1 {
+    display: none;
+  }
+
+  #project_element_2 {
+    display: none;
+  }
+
+  #project_element_3 {
+    display: none;
+  }
+
+  #project_element_4 {
+    display: none;
+  }
+
+  .projects-sec .star-bg-image {
+    height: 250vh !important;
+    width: 100%;
+  }
+
+  .projects-sec .grid-bg-image {
+    height: 250vh !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  #project_1 {
+    left: 5vw;
+    width: 90vw;
+    height: 80vh;
+  }
+
+  #ambal-image {
+    width: 89vw;
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .proj-description {
+    width: 85vw;
+  }
+
+
+
+  #project_2 {
+    left: 5vw;
+    width: 90vw;
+    height: 80vh;
+    position: absolute;
+    top: 104vh;
+  }
+
+  #pau_infinity {
+    width: 89vw;
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .image_holder {
+    width: 89vw;
+  }
+
+
+
+
+}
+

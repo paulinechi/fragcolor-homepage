@@ -19,6 +19,8 @@ import investor5 from '../../asset/figmaElements/9.svg';
 import investor6 from '../../asset/figmaElements/lemniscap_logo_black 1.svg';
 import investor7 from '../../asset/figmaElements/Group.svg';
 
+import landingPageGrid from '../../asset/figmaElements/landingPageGridFading.svg';
+
 @Component({
   name: 'mainpage',
   components: {
@@ -37,7 +39,8 @@ import investor7 from '../../asset/figmaElements/Group.svg';
     investor4,
     investor5,
     investor6,
-    investor7
+    investor7,
+    landingPageGrid
   },
 })
 export default class MainPage extends Vue {
@@ -51,3 +54,5 @@ export default class MainPage extends Vue {
     this.selectedTab = newTab;
   }
 }
+
+

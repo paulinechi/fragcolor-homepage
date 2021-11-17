@@ -2,11 +2,61 @@
 <script src="./MainPage.ts"></script>
 
 <template>
-  <div class="mainPage">
+  <div class="mainPage careers-page-sec">
+    <div class="blur-foreground" v-if="allowPopup"></div>
+
+    <img
+      class="star-bg-image"
+      :src="require(`../../asset/figmaElements/star_background.png`)"
+      alt="Fragcolor Star Background"
+    />
+    <img
+      class="grid-bg-image"
+      :src="require(`../../asset/figmaElements/background-grid.png`)"
+      alt="Fragcolor Grid Background"
+    />
     <global-header> </global-header>
 
     <div class="body">
       <social-bar />
+
+      <!-- ------------------------------- form submission status ---------------------------- -->
+      <!-- ------------------------------- successful ---------------------------- -->
+
+      <div v-if="submitSuccessful && allowPopup" class="cv-feedback-sec" id="popup">
+        <div class="close" v-on:click="closePopupWindow">
+          <close />
+        </div>
+        <popupGrid id="popup-grid" style="position: absolute" />
+
+        <div class="cv-successfully">
+          <cvSentSuccessfully />
+        </div>
+
+        <h1>CV sent successfully</h1>
+        <div class="got-it-btn" v-on:click="closePopupWindow">
+          <cvGotItBtn />
+        </div>
+      </div>
+
+      <!-- ------------------------------- failed ---------------------------- -->
+
+      <div v-if="submitFailed && allowPopup" class="cv-feedback-sec" id="popup">
+        <div class="close" v-on:click="closePopupWindow">
+          <close />
+        </div>
+        <popupGrid  id="popup-grid"  style="position: absolute" />
+
+        <div class="cv-successfully">
+          <cvSentFailed />
+        </div>
+
+        <h1 class="msg-not-sent">Something went wrong</h1>
+        <p>Message not sent</p>
+        <div class="got-it-btn" v-on:click="closePopupWindow">
+          <cvTryAgainBtn />
+        </div>
+      </div>
 
       <!-- ---------------------------------------------------- job lists ----------------------------------------------------  -->
       <div class="career-page-job-list" v-if="backToJobList">
@@ -82,8 +132,10 @@
         <div class="apply-sec-header">
           <h2>Didn't find the right opportunity that fits you?</h2>
           <div class="form">
+            <newsletterGrid id="career-form-grid" style="position: absolute" />
+
             <div class="careers-sec-form">
-              <b-form @submit="onSubmit">
+              <b-form id="resume-form" enctype="multipart/form-data" @submit="onSubmit">
                 <div class="careers-sec-form-floatLeft">
                   <b-form-group id="careers-sec-form-firstName" label-for="input-1">
                     <b-form-input
@@ -92,6 +144,7 @@
                       placeholder="First name"
                       required
                       class="form-input"
+                      name="firstname"
                     ></b-form-input>
                   </b-form-group>
 
@@ -102,6 +155,7 @@
                       placeholder="Last name"
                       required
                       class="form-input"
+                      name="lastname"
                     ></b-form-input>
                   </b-form-group>
 
@@ -113,6 +167,7 @@
                       placeholder="Email"
                       required
                       class="form-input"
+                      name="email"
                     ></b-form-input>
                   </b-form-group>
                 </div>
@@ -125,6 +180,7 @@
                       placeholder="LinkedIn / Github / Personal website"
                       required
                       class="form-input"
+                      name="website"
                     ></b-form-input>
                   </b-form-group>
 
@@ -137,9 +193,15 @@
                       rows="3"
                       max-rows="6"
                       class="form-input"
+                      name="message"
                     ></b-form-textarea>
                   </b-form-group>
-                  <b-button type="submit" variant="primary">Send cv</b-button>
+                  <b-button type="submit" variant="primary" class="send-resume-btn-main"
+                    >Send cv</b-button
+                  >
+                  <b-button type="submit" variant="primary" class="send-resume-btn-tablet"
+                    >Send cv</b-button
+                  >
                 </div>
 
                 <!-- terms and use and upload -->
@@ -150,16 +212,23 @@
                     name="checkbox-1"
                     value="accepted"
                     unchecked-value="not_accepted"
+                    required
                   >
                     I agree to Terms and Privacy
                   </b-form-checkbox>
                 </div>
 
                 <div class="upload-file">
-                  <b-form-file v-model="file1" class="mt-3" plain>
-                    Attach CV
+                  <attach-file-btn id="attach-file-btn" />
+
+                  <b-form-file
+                    v-model="file1"
+                    :state="Boolean(file1)"
+                    placeholder="Attach CV"
+                    drop-placeholder="Drop file here..."
+                    name="resume"
+                  >
                   </b-form-file>
-                  <!-- <div class="mt-3">Selected file: {{ file2 ? file2.name : "" }}</div> -->
                 </div>
               </b-form>
             </div>
@@ -177,7 +246,7 @@
             selectedGameEngineProgrammer = false;
           "
         >
-          <arrowLeft />
+          <arrowLeft style="width: 2vw" />
           Return to Careers
         </div>
         <!-- --------------------------------------------------------- game engine programmer ----------------------------------------------------  -->
@@ -326,8 +395,14 @@
 
         <div class="career-page-description-page-form" v-if="backToJobList == false">
           <div class="form">
+            <newsletterGrid id="career-form-grid-refer" style="position: absolute" />
+
             <div class="careers-sec-form">
-              <b-form id="resume-upload-form" method="post" @submit="onSubmit(e)">
+              <b-form
+                id="resume-upload-form"
+                enctype="multipart/form-data"
+                @submit="onSubmit"
+              >
                 <div class="careers-sec-form refer-friend">
                   <b-button type="submit" variant="primary">Send cv</b-button>
 
@@ -390,7 +465,9 @@
                       class="form-input"
                     ></b-form-textarea>
                   </b-form-group>
-                  <b-button type="submit" variant="primary">Send cv</b-button>
+                  <b-button type="submit" variant="primary" class="send-resume-btn"
+                    >Send cv</b-button
+                  >
                 </div>
 
                 <!-- terms and use and upload -->
@@ -407,10 +484,21 @@
                 </div>
 
                 <div class="upload-file">
-                  <b-form-file v-model="file1" class="mt-3" plain>
-                    Attach CV
+                  <attach-file-btn id="attach-file-btn" />
+
+                  <b-form-file
+                    v-model="file1"
+                    :state="Boolean(file1)"
+                    placeholder="Attach CV"
+                    drop-placeholder="Drop file here..."
+                    name="resume"
+                  >
                   </b-form-file>
                 </div>
+
+                <b-button type="submit" variant="primary" class="send-resume-btn-tablet"
+                  >Send cv</b-button
+                >
               </b-form>
             </div>
           </div>

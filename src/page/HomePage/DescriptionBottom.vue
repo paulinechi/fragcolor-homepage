@@ -21,7 +21,7 @@
       <a href="https://twitter.com/fragcolor" target="_blank">
         <twitter class="icon" />
       </a>
-      <a href="https://discord.com/invite/c7mjxvYqd3" target="_blank">
+      <a href="https://discord.fragcolor.com/" target="_blank">
         <discord class="icon" />
       </a>
       <a href="https://t.me/fragcolor" target="_blank">
@@ -45,8 +45,8 @@
     </div>
 
     <div class="footer-submenu">
-      <a href="#" class="footerMenuStyle"> Terms of Use </a>
-      <a href="#" class="footerMenuStyle"> Privacy Policy </a>
+      <a href="#" class="footerMenuStyle" id="terms-of-use"> Terms of Use </a>
+      <a href="#" class="footerMenuStyle" id="privacy-policy"> Privacy Policy </a>
     </div>
 
     <div class="footer-copyright">

@@ -6,7 +6,7 @@
     <a href="https://twitter.com/fragcolor" target="_blank">
       <twitter class="icon" />
     </a>
-    <a href="https://discord.com/invite/c7mjxvYqd3" target="_blank">
+    <a href="https://discord.fragcolor.com/" target="_blank">
       <discord class="icon" />
     </a>
     <a href="https://t.me/fragcolor" target="_blank">

@@ -5,7 +5,13 @@
 <template>
   <!-- ===================================== landing page ===================================== -->
   <div class="homePageMainPage">
-    <landingPageGrid id="landingGrid" />
+    <img
+      class="star-bg-image"
+      :src="require(`../../asset/figmaElements/star_background.png`)"
+      alt="Fragcolor Star Background"
+    />
+
+    <landingPageGrid class="landingGrid" />
 
     <div>
       <div class="description">
@@ -23,8 +29,9 @@
             right tools to establish new forms of monetization, independent of closed
             systems for its creators. -->
 
-            Our creator tools allow for absolute interoperability of game data and logic, 
-            independence from market-dominant closed systems and decentralized value distribution.
+            Our creator tools allow for absolute interoperability of game data and logic,
+            independence from market-dominant closed systems and decentralized value
+            distribution.
           </h3>
         </div>
 
@@ -106,9 +113,9 @@
       <div class="homepage-projects-sec-text" v-if="selectedProject2">
         <h2>Endless by Pau Rosello</h2>
         <p>
-          Endless is an immutable real time art generated on minting by primary sale buyers
-           building on top of creator's work. The series is inspired by the Swiss architect
-            Max Bill’s "Quinze variations sur un même thème" ...
+          Endless is an immutable real time art generated on minting by primary sale
+          buyers building on top of creator's work. The series is inspired by the Swiss
+          architect Max Bill’s "Quinze variations sur un même thème" ...
         </p>
         <forwardArrow id="forward-arrow" v-on:click="prevProject" />
         <backwardArrow id="backward-arrow" v-on:click="nextProject" />
@@ -148,6 +155,28 @@
         </div>
       </div>
 
+      <div class="homepage-projects-sec-text-tablet ambal">
+        <h2>Ambal Tournament</h2>
+        <p>
+          Duel in a high fantasy land, mastering your skills in strategic battles with
+          simultaneous game play. Collect decks and characters to create powerful builds
+          in this RPG inspired card game.
+        </p>
+        <!-- <forwardArrow id="forward-arrow" v-on:click="prevProject" />
+        <backwardArrow id="backward-arrow" v-on:click="nextProject" /> -->
+      </div>
+
+      <div class="homepage-projects-sec-text-tablet pau-infinity">
+        <h2>Endless by Pau Rosello</h2>
+        <p>
+          Endless is an immutable real time art generated on minting by primary sale
+          buyers building on top of creator's work. The series is inspired by the Swiss
+          architect Max Bill’s "Quinze variations sur un même thème" ...
+        </p>
+        <!-- <forwardArrow id="forward-arrow" v-on:click="prevProject" />
+        <backwardArrow id="backward-arrow" v-on:click="nextProject" /> -->
+      </div>
+
       <div class="homepage-projects-sec-showmore">
         <a href="/projects">
           <showMore />
@@ -155,15 +184,14 @@
       </div>
     </div>
 
-
     <!-- ===================================== quote ===================================== -->
 
     <div class="homepage-quote-sec" v-if="selectedQuote1">
       <quoteSign id="homepage-quote-sec-quote" />
       <h3 id="homepage-quote-sec-text">
-        With a strong team with extensive game development background and solid products, 
-        Fragcolor is going to raise the bar for blockchain gaming projects in the crypto space. 
-        This investment marks our continued focus in the blockchain game ecosystem.
+        With a strong team with extensive game development background and solid products,
+        Fragcolor is going to raise the bar for blockchain gaming projects in the crypto
+        space. This investment marks our continued focus in the blockchain game ecosystem.
       </h3>
       <h3 id="homepage-quote-sec-investor">DWEb3</h3>
       <p id="homepage-quote-sec-investor-desc">Lorem ipsum dolor</p>
@@ -179,11 +207,11 @@
     <div class="homepage-quote-sec" v-if="selectedQuote2">
       <quoteSign id="homepage-quote-sec-quote" />
       <h3 id="homepage-quote-sec-text">
-        Fragments Foundation organically combines Metaverse and Web3 at such a point in time, 
-        building a set of user-friendly game development engines and crypto native solutions. 
-         The shackles of centralized games no longer restrict users; instead, they can devote 
-         themselves to develop  and experience games in the metaverse, thus fully enjoying the 
-         value brought about by Web3.
+        Fragments Foundation organically combines Metaverse and Web3 at such a point in
+        time, building a set of user-friendly game development engines and crypto native
+        solutions. The shackles of centralized games no longer restrict users; instead,
+        they can devote themselves to develop and experience games in the metaverse, thus
+        fully enjoying the value brought about by Web3.
       </h3>
       <h3 id="homepage-quote-sec-investor">ArkStream Capital</h3>
       <p id="homepage-quote-sec-investor-desc">Lorem ipsum dolor</p>
@@ -197,16 +225,17 @@
     </div>
 
     <!-- ===================================== newsletter ===================================== -->
-    <newsLetterElement1 id="newsletter-sec-element1" />
+    <!-- hide for now, use our old newsletter signup window -->
+    <!-- <newsLetterElement1 id="newsletter-sec-element1" />
     <newsLetterElement2 id="newsletter-sec-element2" />
     <newsLetterElement3 id="newsletter-sec-element3" />
 
     <div class="homepage-newsletter-sec">
-      <newsletterGrid style="position: absolute" />
+      <newsletterGrid id="newsletter-grid-homepage" style="position: absolute;" />
       <h1>Join Our Newsletter</h1>
       <p>
-        Sign up to stay up to date on our latest news, open calls, product updates and special 
-        promotions.
+        Sign up to stay up to date on our latest news, open calls, product updates and
+        special promotions.
       </p>
       <div class="newsletter-email">
         <b-form @submit="onSubmit">
@@ -223,7 +252,7 @@
           <b-button type="submit" variant="primary">Subscribe</b-button>
         </b-form>
       </div>
-    </div>
+    </div> -->
 
     <!-- ===================================== news sec ===================================== -->
 
@@ -256,8 +285,8 @@
         />
         <h3>Create to Earn Economy and the Bottom-up Fragment Model</h3>
         <p>
-          “Create to Earn”, a creator-centric Play to Earn analogy, is introduced by 
-          Fragcolor to describe the new economic possibilities it is building for game 
+          “Create to Earn”, a creator-centric Play to Earn analogy, is introduced by
+          Fragcolor to describe the new economic possibilities it is building for game
           asset creators, which, in turn, provide an alternative path of monetization.
         </p>
       </div>

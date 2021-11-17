@@ -9,12 +9,23 @@ import careersProp3 from '../../asset/figmaElements/careers3.svg';
 import careersProp4 from '../../asset/figmaElements/careers4.svg';
 import arrow from '../../asset/figmaElements/arrow.svg';
 import arrowLeft from '../../asset/figmaElements/arrow_left.svg';
+import newsletterGrid from '../../asset/figmaElements/newsletter_grid.svg';
+
+import popupGrid from '../../asset/figmaElements/popup_grid.svg';
+import close from '../../asset/figmaElements/Close.svg';
+
+import attachFileBtn from '../../asset/figmaElements/attach_file_btn.svg';
+import cvSentFailed from '../../asset/figmaElements/cv_sent_failed.svg';
+import cvSentSuccessfully from '../../asset/figmaElements/cv_sent_successfully.svg';
+import cvGotItBtn from '../../asset/figmaElements/cv_got_it.svg';
+import cvTryAgainBtn from '../../asset/figmaElements/cv_try_again.svg';
 
 import { BForm, BFormGroup, BFormInput, BButton, BFormFile, BFormCheckbox, BFormTextarea } from 'bootstrap-vue';
 
 import * as $ from 'jquery';
 
 import emailjs from 'emailjs-com';
+import axios from 'axios';
 emailjs.init("user_FTv1dMUAhrODFjE1GRm9V"); // user_id from emailJs
 
 @Component({
@@ -30,12 +41,21 @@ emailjs.init("user_FTv1dMUAhrODFjE1GRm9V"); // user_id from emailJs
     'b-form-file': BFormFile,
     'b-form-checkbox': BFormCheckbox,
     'b-form-textarea': BFormTextarea,
+    'attach-file-btn': attachFileBtn,
     careersProp1,
     careersProp2,
     careersProp3,
     careersProp4,
     arrow,
-    arrowLeft
+    arrowLeft,
+    popupGrid,
+    close,
+    cvSentSuccessfully,
+    cvSentFailed,
+    cvGotItBtn,
+    cvTryAgainBtn,
+    newsletterGrid
+
   },
 })
 export default class MainPage extends Vue {
@@ -52,15 +72,15 @@ export default class MainPage extends Vue {
   public message: string = '';
   public checkBoxStatus: string = '';
   public file1: any = null;
-  public file2: any = null;
 
   public backToJobList: boolean = true;
   public selectedGameEngineProgrammer: boolean = false;
   public selectedSubstractProgrammer: boolean = false;
   public selectedMarketingIntern: boolean = false;
 
-
-
+  public submitSuccessful: boolean = false;
+  public submitFailed: boolean = false;
+  public allowPopup: boolean = false;
 
   public changeTab(newTab: string): void {
     this.selectedTab = newTab;
@@ -69,60 +89,50 @@ export default class MainPage extends Vue {
   public onSubmit(e: Event): void {
     e.preventDefault();
     console.log(this.file1);
-    console.log(document.forms);
-    
-      // emailjs.send('service_qqlrujg', 'template_shwlbab', {
-      //       firstname: this.firstname,
-      //       lastname: this.lastname,
-      //       email: this.email,
-      //       websiteLink: this.websiteLink,
-      //       message: this.message,
-      //       attachement: this.file1,
-      //       attachement2: this.file2,
-      //     }, 'user_FTv1dMUAhrODFjE1GRm9V');
 
-// document.getElementById('contact-form')
-
-      emailjs.sendForm('service_qqlrujg', 'template_shwlbab', document.forms[0])
-      .then(function(response) {
+    emailjs.sendForm('service_qqlrujg', 'template_shwlbab', '#resume-form',
+      'user_FTv1dMUAhrODFjE1GRm9V')
+      .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-     }, function(error) {
+        this.submitSuccessful = true;
+        this.allowPopup = true;
+      }, (error) => {
         console.log('FAILED...', error);
-     });
+        this.submitFailed = true;
+        this.allowPopup = true;
+      });
+    ;
+
+    
 
 
-    // emailjs.sendForm('service_qqlrujg', 'template_shwlbab', {
-    //   firstname: this.firstname,
-    //   email: this.email,
-    //   message: this.message
-    // }, 'user_FTv1dMUAhrODFjE1GRm9V')
+    // axios({
+    //   method: "post",
+    //   url: "https://localhost:8081/email",
+    //   data: bodyFormData,
+    //   headers: { "Content-Type": "multipart/form-data" },
+    // })
+    //   .then(function (response: any) {
+    //     //handle success
+    //     console.log(response);
+    //   })
+    //   .catch(function (response: any) {
+    //     //handle error
+    //     console.log(response);
+    //   });
+  }
 
 
+  public closePopupWindow(): void {
+    this.allowPopup = false;
 
-    // var data = {
-    //   service_id: 'service_qqlrujg',
-    //   template_id: 'template_shwlbab',
-    //   user_id: 'user_FTv1dMUAhrODFjE1GRm9V',
-    //   template_params: {
-          // 'firstname': this.firstname,
-          // 'lastname': this.lastname,
-          // 'email': this.email,
-          // 'websiteLink': this.websiteLink,
-          // 'message': this.message,
-          // 'attachement': this.file1,
-          // 'attachement2': this.file2
-    //   }
-    // };
-   
-    // $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-    //     type: 'POST',
-    //     data: JSON.stringify(data),
-    //     contentType: 'application/json'
-    // }).done(function() {
-    //     alert('Your mail is sent!');
-    // }).fail(function(error) {
-    //     alert('Oops... ' + JSON.stringify(error));
-    // });
-
+    // clear the form
+    this.email = '';
+    this.firstname = '';
+    this.lastname = '';
+    this.websiteLink = '';
+    this.message = '';
+    this.checkBoxStatus = '';
+    this.file1 = null;
   }
 }
