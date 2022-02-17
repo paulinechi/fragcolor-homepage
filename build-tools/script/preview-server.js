@@ -16,6 +16,9 @@ const port = 4040;
 const server = express();
 const root = path.join(__dirname, '../../dist');
 
+// console.log('root');
+// console.log(root);
+
 // handle fallback for HTML5 history API
 server.use(require('connect-history-api-fallback')());
 server.use(compression());

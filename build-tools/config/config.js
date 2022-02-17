@@ -10,7 +10,15 @@ loading any script in your HTML.
  */
 
 // let publicPath = '.';
-let publicPath = '';
+let publicPath = '';  
+// ^ previously
+
+// let publicPath = './';
+// let publicPath = window['webpackPublicPath']；
+
+// console.log('argv.publicPath');
+// console.log(argv.publicPath);
+// console.log(argv);
 
 if(argv.publicPath){
   publicPath = argv.publicPath;
@@ -45,6 +53,9 @@ const buildTypes = {
   DEVELOPMENT: 'development',
   PRODUCTION: 'production'
 };
+
+// console.log('project root');
+// console.log(path.resolve(__dirname, '../../'));
 
 module.exports = {
   buildTypes,
@@ -98,3 +109,9 @@ module.exports = {
     }
   },
 };
+
+
+// console.log('-------------------------- project root --------------------------');
+// console.log(path.resolve(__dirname, '../../'));
+// console.log('-------------------------- public path --------------------------');
+// console.log(publicPath);

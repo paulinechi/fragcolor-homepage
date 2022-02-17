@@ -20,12 +20,10 @@
 
     <div class="body">
       <social-bar />
-      <h2>Core Fragments Ecosystem Components</h2>
-      <p id="technology-intro-text">
-        As its core game engine components, Fragcolor is developing the Hasten game
-        creation and portal app, Chainblocks programmable game engine and scripting tool,
-        as well as the Clamor substrate protocol and peer-to-peer networking stack
-      </p>
+      <!-- <h2>Core Fragments Ecosystem Components</h2> -->
+      <h2>Technology</h2>
+      <br />
+      <br />
 
       <div class="technology hasten">
         <div class="text">
@@ -41,6 +39,7 @@
           </p>
           <a href="https://github.com/fragcolor-xyz/hasten" target="_blank">
             <githubBtn class="github-btn" />
+            <img :src="require(`../../asset/figmaElements/mobile_github_purple_btn.png`)" class="github-btn-mobile" />
           </a>
         </div>
         <div class="image">
@@ -66,6 +65,7 @@
           </p>
           <a href="https://github.com/fragcolor-xyz/chainblocks" target="_blank">
             <githubBlueBtn class="github-btn" />
+            <img :src="require(`../../asset/figmaElements/mobile_github_blue_btn.png`)" class="github-btn-mobile" />
           </a>
         </div>
         <div class="chainblocks-image-tablet">
@@ -87,6 +87,7 @@
           </p>
           <a href="https://github.com/fragcolor-xyz/clamor" target="_blank">
             <githubGreenBtn class="github-btn" />
+            <img :src="require(`../../asset/figmaElements/mobile_github_green_btn.png`)" class="github-btn-mobile" />
           </a>
         </div>
         <div class="image">
@@ -94,7 +95,7 @@
         </div>
       </div>
 
-      <description-bottom></description-bottom>
+      <!-- <description-bottom></description-bottom> -->
     </div>
   </div>
 </template>

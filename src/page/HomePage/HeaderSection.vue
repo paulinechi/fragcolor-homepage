@@ -6,10 +6,12 @@
     <div class="blur-foreground" v-if="allowPopup"></div>
     <div class="top-menu-bar">
       <a href="/">
-        <img
+        <!-- <img
           :src="require(`../../asset/figmaElements/horizontal_logo_menu.png`)"
           class="header-logo"
-        />
+        /> -->
+
+        <headerLogo  class="header-logo"  />
 
         <img
           :src="require(`../../asset/figmaElements/fragcrolor_logo_without_text.png`)"
@@ -34,14 +36,14 @@
         >
 
         <router-link
-          to="/team"
+          to="/about"
           class="nav-link titleStyle selectedTitle"
           style="max-width: 940px"
           v-if="selectedAbout"
           ><b>About</b></router-link
         >
         <router-link
-          to="/team"
+          to="/about"
           class="nav-link titleStyle"
           style="max-width: 940px"
           v-if="selectedAbout == false"
@@ -76,6 +78,20 @@
           ><b>Projects</b></router-link
         >
         <router-link
+          to="/careers"
+          class="nav-link titleStyle selectedTitle"
+          style="max-width: 940px"
+          v-if="selectedCareer"
+          ><b>Team</b></router-link
+        >
+        <router-link
+          to="/careers"
+          class="nav-link titleStyle"
+          style="max-width: 940px"
+          v-if="selectedCareer == false"
+          ><b>Team</b></router-link
+        >
+        <router-link
           to="/blog"
           class="nav-link titleStyle selectedTitle"
           style="max-width: 940px"
@@ -90,22 +106,7 @@
           v-if="selectedBlog == false"
           ><b>Blog</b></router-link
         >
-        <router-link
-          to="/careers"
-          class="nav-link titleStyle selectedTitle"
-          style="max-width: 940px"
-          v-if="selectedCareer"
-          ><b>Careers</b></router-link
-        >
-        <router-link
-          to="/careers"
-          class="nav-link titleStyle"
-          style="max-width: 940px"
-          v-if="selectedCareer == false"
-          ><b>Careers</b></router-link
-        >
-
-        <!-- <a href="https://docs.fragcolor.xyz/blocks/"><b>Developers Guide</b></a> -->
+        
       </div>
 
       <div class="nav-menu-tablet">
@@ -127,14 +128,14 @@
           >
 
           <router-link
-            to="/team"
+            to="/about"
             class="nav-link titleStyle selectedTitle"
             style="max-width: 940px"
             v-if="selectedAbout"
             ><b>About</b></router-link
           >
           <router-link
-            to="/team"
+            to="/about"
             class="nav-link titleStyle"
             style="max-width: 940px"
             v-if="selectedAbout == false"
@@ -155,18 +156,18 @@
             ><b>Technology</b></router-link
           >
           <router-link
-            to="/projects"
+            to="/careers"
             class="nav-link titleStyle selectedTitle"
             style="max-width: 940px"
-            v-if="selectedProj"
-            ><b>Projects</b></router-link
+            v-if="selectedCareer"
+            ><b>Team</b></router-link
           >
           <router-link
-            to="/projects"
+            to="/careers"
             class="nav-link titleStyle"
             style="max-width: 940px"
-            v-if="selectedProj == false"
-            ><b>Projects</b></router-link
+            v-if="selectedCareer == false"
+            ><b>Team</b></router-link
           >
           <router-link
             to="/blog"
@@ -182,20 +183,6 @@
             style="max-width: 940px"
             v-if="selectedBlog == false"
             ><b>Blog</b></router-link
-          >
-          <router-link
-            to="/careers"
-            class="nav-link titleStyle selectedTitle"
-            style="max-width: 940px"
-            v-if="selectedCareer"
-            ><b>Careers</b></router-link
-          >
-          <router-link
-            to="/careers"
-            class="nav-link titleStyle"
-            style="max-width: 940px"
-            v-if="selectedCareer == false"
-            ><b>Careers</b></router-link
           >
         </div>
       </div>
@@ -238,9 +225,9 @@
           <a href="https://angel.co/company/fragcolor" target="_blank">
             <angelList class="icon" />
           </a>
-          <a href="https://opensea.io/collection/fragcolor" target="_blank">
+          <!-- <a href="https://opensea.io/collection/fragcolor" target="_blank">
             <opensea class="icon" />
-          </a>
+          </a> -->
         </div>
 
         <!-- keep our old newsletter signup popup window for now -->

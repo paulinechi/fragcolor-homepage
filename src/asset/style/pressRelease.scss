@@ -1,0 +1,108 @@
+.press-release-sec {
+    color: white;
+    width: 65vw;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    margin-top: 16vh;
+    margin-bottom: 5vh;
+}
+
+.press-release-sec h2 {
+    width: 65vw;
+    // height: 35vh;
+    left: 0;
+    top: 104px;
+
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+    // text-align: center;
+
+    background-image: linear-gradient(
+        70.71deg,
+        #8f67e2 -11.82%,
+        #7d89e5 2.93%,
+        #6aace9 20.96%,
+        #5ec1eb 35.76%,
+        #5ac9ec 45.4%,
+        #51eabd 103.27%
+    );
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.press-release-sec ul {
+    margin-bottom: 8vh;
+    font-size: 20px;
+    margin-top: 5vh;
+}
+
+
+.press-release-sec li {
+    line-height: 35px;
+    margin-bottom: 2vh;
+}
+
+
+.press-release-sec p {
+    margin-bottom: 3vh !important;
+}
+
+.press-release-sec .date {
+    // text-align: right;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.press-sec-download-logos {
+    margin-bottom: 5vh;
+    // color: white;
+    width: 100%;
+}
+
+.press-sec-download-logos p {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    width: 25vw;
+    color: white;
+}
+
+.press-sec-download-logos p:hover {
+    background-image: linear-gradient(
+      70.71deg,
+      #8f67e2 -11.82%,
+      #7d89e5 2.93%,
+      #6aace9 20.96%,
+      #5ec1eb 35.76%,
+      #5ac9ec 45.4%,
+      #51eabd 103.27%
+    );
+  
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+@media screen and (max-width: 430px) {
+
+    .press-release-sec {
+        width: 80vw;
+    }
+
+    .press-release-sec h2 {
+        width: 80vw;
+        font-size: 30px;
+        line-height: 40px;
+        // height: 50vh;
+        height: fit-content;
+    }
+
+
+}
+

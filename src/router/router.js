@@ -10,6 +10,8 @@ import routes from './routes';
 
 Vue.use(VueRouter);
 
+// console.log(routes);
+
 let router = null;
 
 const getRouter = () => {
@@ -25,11 +27,22 @@ const getRouter = () => {
             redirect: '/',
           });
 
+    // console.log(processedRoutes);
+    // console.log('base:')
+    // console.log(configManager.getVariable(VariableNames.PUBLIC_PATH));
+
     router = new VueRouter({
+      // mode: 'hash',
       mode: 'history',
       routes: processedRoutes,
       base: configManager.getVariable(VariableNames.PUBLIC_PATH),
+
+      fallback: true,
+      // base: '/press/'
     });
+
+    // console.log('router in router.js:');
+    // console.log(router);
 
     router.beforeEach((to, from, next) => {
       const persistQueryParams = configManager.getProperty(PropertyNames.PERSIST_QUERY_PARAMS);
@@ -55,10 +68,11 @@ const getRouter = () => {
       } else {
         next();
       }
+      window.scrollTo(0, 0);
     });
   }
 
-  console.log(router);
+  // console.log(router);
 
 
   return router;

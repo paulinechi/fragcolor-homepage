@@ -14,8 +14,13 @@
     margin-left: auto;
     margin-right: auto;
 
-    // background-color: #000;
+    background-color: #000;
     // background-image: url('../../asset/figmaElements/star_background.png');
+}
+
+.triangle-bg-image {
+    position: absolute;
+    width: 100%;
 }
 
 .star-bg-image {
@@ -59,7 +64,9 @@
 
 .technology-sec h2 {
     width: 38vw;
-    height: 13vh;
+    // height: 18vh;
+    height: fit-content;
+    padding-bottom: 5vh;
     top: 9vw;
 
     font-weight: bold;
@@ -84,6 +91,14 @@
     position: relative;
 }
 
+@media screen and (max-width: 1100px) {
+    .technology-sec h2 {
+        width: 55vw;
+        height: fit-content;
+        top: 12vw;   
+        padding-bottom: 5vh; 
+    }
+}
 .technology-sec .star-bg-image {
     height: 100% !important;
     width: 100%;
@@ -188,7 +203,7 @@
     font-size: 40px !important;
     line-height: 56px;
     background-size: 100%;
-    width: 150px;
+    width: 180px;
     background: linear-gradient(85.44deg, #66e7c1 18.52%, #96ff86 101.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -211,6 +226,12 @@
     // position: absolute;
     // top: 350px;
     margin-top: 10%;
+}
+
+.github-btn-mobile{
+    margin-top: 10%;
+    width: 90vw !important;
+    display: none;
 }
 
 .chainblocks-image {
@@ -260,7 +281,8 @@
     width: 40vw;
     height: 30vh;
     left: 26.5vw;
-    top: 10vh;
+    // top: 18vh;
+    top: 100px;
 }
 
 .clamor h1 {
@@ -296,7 +318,8 @@
     width: 36vw;
     height: 30vh;
     left: 11.5vw;
-    top: 9.5vh;
+    // top: 9.5vh;
+    top: 0;
 }
 
 .clamor .image {
@@ -309,7 +332,8 @@
     width: 552px;
     height: 376px;
     left: 15vw;
-    top: 15vh;
+    // top: 15vh;
+    top: 100px;
     display: inline-block;
 }
 
@@ -327,6 +351,38 @@
     font-weight: bold;
     line-height: 2.5vw;
 }
+
+
+@media screen and (max-width: 1100px) {
+    .chainblocks-image {
+        // display: inline-flex;
+        display: inline;
+        float: left;
+        top: 80px;
+    }
+
+    .chainblocks-image img {
+        width: 280px;
+    }
+
+    .chainblocks .text {
+        top: 0;
+        // display: inline-block;
+    }
+
+    .clamor .image {
+        width: 400px;
+    }
+    
+    .clamor img {
+        width: 450px;
+    }
+
+    .hasten svg {
+        width: 477px;
+    }
+}
+
 
 @media screen and (max-width: 780px) {
     .hasten .image {
@@ -388,7 +444,7 @@
 
     .technology-sec h2 {
         width: 62vw;
-        height: 24vh;
+        // height: fit-content;
         top: 15vw;
     }
 
@@ -401,7 +457,7 @@
 @media screen and (max-width: 430px) {
     .technology-sec h2 {
         width: 80vw;
-        height: 25vh;
+        // height: 25vh;
         top: 23vw;
         font-weight: bold;
         font-size: 40px;
@@ -448,7 +504,11 @@
     }
 
     .hasten {
-        height: 55vh;    
+        height: 55vh;
+    }
+
+    .hasten svg {
+        width: 200px;
     }
 
     .chainblocks .text {
@@ -465,6 +525,7 @@
 
     .chainblocks {
         height: 65vh;
+        margin-top: 150px;
     }
 
     .clamor .text {
@@ -480,12 +541,50 @@
     }
 
     .clamor {
-        height: 70vh;
+        // height: 70vh;
+        height: fit-content;
+        margin-top: 50px;
     }
 
     #value-prop-grid {
         height: 250vw;
         width: 100vw;
         object-fit: cover;
+    }
+
+    .github-btn {
+        display: none;
+    }
+
+    .github-btn-mobile {
+        display: inline;
+    }
+
+}
+
+@media screen and (min-width: 1930px) {
+    .technology-sec .body {
+        // display: inline-block;
+        width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #technology-intro-text {
+        width: 1000px;
+        line-height: 30px;
+    }
+
+    .hasten .text {
+        width: 500px;
+    }
+
+    .chainblocks .text {
+        width: 500px;
+        top: 16vh;
+    }
+
+    .clamor .text {
+        width: 500px;
     }
 }
