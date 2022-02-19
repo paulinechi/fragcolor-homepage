@@ -11,7 +11,7 @@
       class="triangle-bg-image"
       :src="require(`../../asset/figmaElements/bg_image.png`)"
     />
-
+    
     <div class="landing-page-sec">
       <div>
         <div class="description">
