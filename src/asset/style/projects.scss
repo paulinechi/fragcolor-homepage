@@ -4,6 +4,8 @@
   top: 10.94%;
   bottom: 82.85%;
   position: absolute;
+  // width: 200px;
+  width: auto;
 }
 
 #project_element_2 {
@@ -36,9 +38,23 @@
   height: 120vh;
 }
 
+@media screen and (max-width: 1300px) {
+  #project_1 {
+    // height: 78vh;
+    height: fit-content;
+
+  }
+
+  #project_2 {
+    // height: 84vh;
+    height: fit-content;
+  }
+}
+
 @media screen and (max-width: 780px) {
   .projects-sec {
     height: 180vh;
+    // height: fit-content;
   }
 
   #project_element_2 {
@@ -65,10 +81,12 @@
 
   .proj-description {
     width: 65vw;
+    height: fit-content;
   }
 
   #project_2 {
     width: 70vw;
+    // top: 125vh;
     top: 90vh;
   }
 
@@ -79,8 +97,6 @@
   #pau_infinity {
     width: 55vw;
   }
-
-
 }
 
 @media screen and (max-width: 430px) {
@@ -111,11 +127,11 @@
     object-fit: cover;
   }
 
-
   #project_1 {
     left: 5vw;
     width: 90vw;
-    height: 80vh;
+    // height: 80vh;
+    height: fit-content;
   }
 
   #ambal-image {
@@ -125,16 +141,16 @@
 
   .proj-description {
     width: 85vw;
+    height: fit-content;
   }
-
-
 
   #project_2 {
     left: 5vw;
     width: 90vw;
-    height: 80vh;
+    // height: 80vh;
     position: absolute;
-    top: 104vh;
+    top: 120vh;
+    height: fit-content;
   }
 
   #pau_infinity {
@@ -145,9 +161,67 @@
   .image_holder {
     width: 89vw;
   }
-
-
-
-
 }
 
+@media screen and (max-width: 430px) {
+   .projects-sec {
+    height: 230vh;
+  }
+}
+
+@media screen and (max-height: 430px) {
+  #project_1 {
+    // height: 100vh;
+    top: 30vh;
+    height: fit-content;
+
+  }
+
+  #project_2 {
+    top: 110vh;
+    // height: 100vh;
+    height: fit-content;
+  }
+
+  .projects-sec {
+    height: 230vh;
+  }
+
+  #project_element_4 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1930px) {
+  .projects {
+    width: 1440px;
+  }
+
+  .proj-description {
+    width: 500px;
+  }
+
+  #project_1 {
+    width: 550px;
+    position: relative;
+    left: 170px;
+  }
+
+  #ambal-image {
+    width: 549px;
+  }
+
+  #project_2 {
+    width: 550px;
+    position: relative;
+    left: 240px;
+  }
+
+  .image_holder {
+    width: 549px;
+  }
+
+  #pau_infinity {
+    width: 450px;
+  }
+}

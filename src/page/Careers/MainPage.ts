@@ -72,6 +72,7 @@ export default class MainPage extends Vue {
   public message: string = '';
   public checkBoxStatus: string = '';
   public file1: any = null;
+  public positionApplied: string = '';
 
   public backToJobList: boolean = true;
   public selectedGameEngineProgrammer: boolean = false;
@@ -86,11 +87,27 @@ export default class MainPage extends Vue {
     this.selectedTab = newTab;
   }
 
-  public onSubmit(e: Event): void {
+  public onSubmitSeletctPosition(e: Event): void {
     e.preventDefault();
-    console.log(this.file1);
 
     emailjs.sendForm('service_qqlrujg', 'template_shwlbab', '#resume-form',
+      'user_FTv1dMUAhrODFjE1GRm9V')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        this.submitSuccessful = true;
+        this.allowPopup = true;
+      }, (error) => {
+        console.log('FAILED...', error);
+        this.submitFailed = true;
+        this.allowPopup = true;
+      });
+    ;
+  }
+
+  public onSubmit(e: Event): void {
+    e.preventDefault();
+
+    emailjs.sendForm('service_qqlrujg', 'template_shwlbab', '#resume-upload-form',
       'user_FTv1dMUAhrODFjE1GRm9V')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);

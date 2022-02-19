@@ -35,6 +35,9 @@ if (window.webpackPublicPath) {
 }
 
 const router = getRouter();
+// console.log('get router:')
+// console.log(router);
+
 const store = getStore();
 const localeConfig = getLocaleConfig();
 
@@ -58,6 +61,12 @@ const app = new Vue({
   store,
   render: (createElement) => createElement(App),
 });
+
+// console.log(window.webpackPublicPath);
+// console.log(router);
+// console.log(store);
+// console.log(app);
+
 
 // Mount the app after startUp
 startUp(store).then(() => {

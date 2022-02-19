@@ -18,6 +18,8 @@ import investor4 from '../../asset/figmaElements/8.svg';
 import investor5 from '../../asset/figmaElements/9.svg';
 import investor6 from '../../asset/figmaElements/lemniscap_logo_black 1.svg';
 import investor7 from '../../asset/figmaElements/Group.svg';
+import m6 from '../../asset/figmaElements/M6_White.svg';
+
 
 import landingPageGrid from '../../asset/figmaElements/landingPageGridFading.svg';
 
@@ -40,7 +42,8 @@ import landingPageGrid from '../../asset/figmaElements/landingPageGridFading.svg
     investor5,
     investor6,
     investor7,
-    landingPageGrid
+    landingPageGrid,
+    m6
   },
 })
 export default class MainPage extends Vue {

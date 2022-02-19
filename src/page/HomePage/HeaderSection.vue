@@ -6,197 +6,109 @@
     <div class="blur-foreground" v-if="allowPopup"></div>
     <div class="top-menu-bar">
       <a href="/">
-        <img
+        <!-- <img
           :src="require(`../../asset/figmaElements/horizontal_logo_menu.png`)"
           class="header-logo"
-        />
+        /> -->
 
-        <img
+        <headerLogo  class="header-logo"  />
+
+        <!-- <img
           :src="require(`../../asset/figmaElements/fragcrolor_logo_without_text.png`)"
           class="header-logo-tablet"
-        />
+        /> -->
       </a>
 
       <div class="nav-menu">
         <a
-          href="/"
+          href="#"
           class="nav-link titleStyle selectedTitle"
           style="max-width: 940px"
           v-if="selectedHome"
           ><b>Home</b></a
         >
         <a
-          href="/"
+          href="#"
           class="nav-link titleStyle"
           style="max-width: 940px"
           v-if="selectedHome == false"
           ><b>Home</b></a
         >
 
-        <router-link
-          to="/team"
-          class="nav-link titleStyle selectedTitle"
-          style="max-width: 940px"
-          v-if="selectedAbout"
-          ><b>About</b></router-link
-        >
-        <router-link
-          to="/team"
-          class="nav-link titleStyle"
-          style="max-width: 940px"
+        <a href="#about-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+          v-if="selectedAbout" 
+          ><b>About</b></a>
+        <a href="#about-sec" class="nav-link titleStyle" style="max-width: 940px"
           v-if="selectedAbout == false"
-          ><b>About</b></router-link
-        >
-        <router-link
-          to="/technology"
-          class="nav-link titleStyle selectedTitle"
-          style="max-width: 940px"
-          v-if="selectedTech"
-          ><b>Technology</b></router-link
-        >
-        <router-link
-          to="/technology"
-          class="nav-link titleStyle"
-          style="max-width: 940px"
+          ><b>About</b></a>
+        
+        <a href="#technology-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+          v-if="selectedTech" 
+          ><b>Technology</b></a>
+        <a href="#technology-sec" class="nav-link titleStyle" style="max-width: 940px"
           v-if="selectedTech == false"
-          ><b>Technology</b></router-link
-        >
-        <router-link
-          to="/projects"
-          class="nav-link titleStyle selectedTitle"
-          style="max-width: 940px"
-          v-if="selectedProj"
-          ><b>Projects</b></router-link
-        >
-        <router-link
-          to="/projects"
-          class="nav-link titleStyle"
-          style="max-width: 940px"
-          v-if="selectedProj == false"
-          ><b>Projects</b></router-link
-        >
-        <router-link
-          to="/blog"
-          class="nav-link titleStyle selectedTitle"
-          style="max-width: 940px"
-          v-if="selectedBlog"
-          ><b>Blog</b></router-link
-        >
+          ><b>Technology</b></a>
 
-        <router-link
-          to="/blog"
-          class="nav-link titleStyle"
-          style="max-width: 940px"
+        <a href="#team-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+          v-if="selectedTeam" 
+          ><b>Team</b></a>
+        <a href="#team-sec" class="nav-link titleStyle" style="max-width: 940px"
+          v-if="selectedTeam == false"
+          ><b>Team</b></a>
+
+        <a href="#blog-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+          v-if="selectedBlog" 
+          ><b>Blog</b></a>
+        <a href="#blog-sec" class="nav-link titleStyle" style="max-width: 940px"
           v-if="selectedBlog == false"
-          ><b>Blog</b></router-link
-        >
-        <router-link
-          to="/careers"
-          class="nav-link titleStyle selectedTitle"
-          style="max-width: 940px"
-          v-if="selectedCareer"
-          ><b>Careers</b></router-link
-        >
-        <router-link
-          to="/careers"
-          class="nav-link titleStyle"
-          style="max-width: 940px"
-          v-if="selectedCareer == false"
-          ><b>Careers</b></router-link
-        >
-
-        <!-- <a href="https://docs.fragcolor.xyz/blocks/"><b>Developers Guide</b></a> -->
+          ><b>Blog</b></a>
       </div>
 
       <div class="nav-menu-tablet">
         <threeLineMenu id="three-line-menu" v-on:click="showHideDropDownMenu" />
         <div class="nav-drop-down-menu" v-if="showDropDownMenu">
           <a
-            href="/"
+            href="#"
             class="nav-link titleStyle selectedTitle"
             style="max-width: 940px"
             v-if="selectedHome"
             ><b>Home</b></a
           >
           <a
-            href="/"
+            href="#"
             class="nav-link titleStyle"
             style="max-width: 940px"
             v-if="selectedHome == false"
             ><b>Home</b></a
           >
 
-          <router-link
-            to="/team"
-            class="nav-link titleStyle selectedTitle"
-            style="max-width: 940px"
-            v-if="selectedAbout"
-            ><b>About</b></router-link
-          >
-          <router-link
-            to="/team"
-            class="nav-link titleStyle"
-            style="max-width: 940px"
+          <a href="#about-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+            v-if="selectedAbout" 
+            ><b>About</b></a>
+          <a href="#about-sec" class="nav-link titleStyle" style="max-width: 940px"
             v-if="selectedAbout == false"
-            ><b>About</b></router-link
-          >
-          <router-link
-            to="/technology"
-            class="nav-link titleStyle selectedTitle"
-            style="max-width: 940px"
-            v-if="selectedTech"
-            ><b>Technology</b></router-link
-          >
-          <router-link
-            to="/technology"
-            class="nav-link titleStyle"
-            style="max-width: 940px"
+            ><b>About</b></a>
+          
+          <a href="#technology-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+            v-if="selectedTech" 
+            ><b>Technology</b></a>
+          <a href="#technology-sec" class="nav-link titleStyle" style="max-width: 940px"
             v-if="selectedTech == false"
-            ><b>Technology</b></router-link
-          >
-          <router-link
-            to="/projects"
-            class="nav-link titleStyle selectedTitle"
-            style="max-width: 940px"
-            v-if="selectedProj"
-            ><b>Projects</b></router-link
-          >
-          <router-link
-            to="/projects"
-            class="nav-link titleStyle"
-            style="max-width: 940px"
-            v-if="selectedProj == false"
-            ><b>Projects</b></router-link
-          >
-          <router-link
-            to="/blog"
-            class="nav-link titleStyle selectedTitle"
-            style="max-width: 940px"
-            v-if="selectedBlog"
-            ><b>Blog</b></router-link
-          >
+            ><b>Technology</b></a>
 
-          <router-link
-            to="/blog"
-            class="nav-link titleStyle"
-            style="max-width: 940px"
+          <a href="#team-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+            v-if="selectedTeam" 
+            ><b>Team</b></a>
+          <a href="#team-sec" class="nav-link titleStyle" style="max-width: 940px"
+            v-if="selectedTeam == false"
+            ><b>Team</b></a>
+
+          <a href="#blog-sec" class="nav-link titleStyle selectedTitle" style="max-width: 940px"
+            v-if="selectedBlog" 
+            ><b>Blog</b></a>
+          <a href="#blog-sec" class="nav-link titleStyle" style="max-width: 940px"
             v-if="selectedBlog == false"
-            ><b>Blog</b></router-link
-          >
-          <router-link
-            to="/careers"
-            class="nav-link titleStyle selectedTitle"
-            style="max-width: 940px"
-            v-if="selectedCareer"
-            ><b>Careers</b></router-link
-          >
-          <router-link
-            to="/careers"
-            class="nav-link titleStyle"
-            style="max-width: 940px"
-            v-if="selectedCareer == false"
-            ><b>Careers</b></router-link
-          >
+            ><b>Blog</b></a>
         </div>
       </div>
 
@@ -238,9 +150,9 @@
           <a href="https://angel.co/company/fragcolor" target="_blank">
             <angelList class="icon" />
           </a>
-          <a href="https://opensea.io/collection/fragcolor" target="_blank">
+          <!-- <a href="https://opensea.io/collection/fragcolor" target="_blank">
             <opensea class="icon" />
-          </a>
+          </a> -->
         </div>
 
         <!-- keep our old newsletter signup popup window for now -->

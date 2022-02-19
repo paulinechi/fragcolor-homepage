@@ -2,7 +2,7 @@
 <script src="./MainPage.ts"></script>
 
 <template>
-  <div class="mainPage">
+  <div class="mainPage proj-sec">
     <global-header> </global-header>
 
     <div class="body">
@@ -20,16 +20,16 @@
         />
         <div class="projects">
           <div id="project_1">
-            <a href="https://ambaltournament.com">
+            <a href="https://medium.com/@fragcolor/introducing-ambal-duels-the-tournament-goes-digital-45ee4f4b8f4f" target="_blank">
               <img
-                :src="require(`../../asset/figmaElements/ambal.png`)"
+                :src="require(`../../asset/figmaElements/AmbalDuelsLogo.png`)"
                 id="ambal-image"
                 alt="Ambal"
               />
             </a>
 
             <div class="proj-description">
-              <h3><strong>Ambal Tournament</strong></h3>
+              <h3><strong>Ambal Duels</strong></h3>
               <p>
                 Duel in a high fantasy land, mastering your skills in strategic battles
                 with simultaneous game play. Collect decks and characters to create
@@ -40,7 +40,7 @@
 
           <div id="project_2">
             <div class="image_holder">
-              <a href="https://paurosello.net/endless/#/">
+              <a href="https://paurosello.net/endless/#/" target="_blank">
                 <img
                   id="pau_infinity"
                   :src="require(`../../asset/figmaElements/pau_infinity_drop.png`)"

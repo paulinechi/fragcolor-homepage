@@ -4,297 +4,146 @@
 
 <template>
   <!-- ===================================== landing page ===================================== -->
-  <div class="homePageMainPage">
+  <div class="homePageMainPage" @click="hidePopupWhenClick">
+    <img style="display: none" :src="require(`../../asset/figmaElements/favicon.png`)" />
+
     <img
-      class="star-bg-image"
-      :src="require(`../../asset/figmaElements/star_background.png`)"
-      alt="Fragcolor Star Background"
+      class="triangle-bg-image"
+      :src="require(`../../asset/figmaElements/bg_image.png`)"
     />
 
-    <landingPageGrid class="landingGrid" />
+    <div class="landing-page-sec">
+      <div>
+        <div class="description">
+          <div class="intro-text">
+            <h1>
+              Building a game engine <br /> 
+              and experiences on Fragnova’s <br />
+              decentralised network
+            </h1>
+          </div>
 
-    <div>
-      <div class="description">
-        <div class="intro-text">
-          <h1>We are building the engine for a distributed gaming ecosystem</h1>
+          <div id="about-sec"></div><br /><br/><br/>
+          <div class="description-text">
+            <h1>About</h1>
+            <h3>
+              At Fragcolor, our mission is to utilize distributed technologies to provide
+              <br />
+              tools for game creators to allow the creation of interoperable games.
+            </h3>
+            <br />
+
+            <h3 class="description-subtext">
+              We are also the studio behind Ambal Duels and Rhythm Run
+            </h3>
+          </div>
+
+          <div class="projects-img-holder">
+            <img
+              class="projects-img-ambal"
+              :src="require(`../../asset/figmaElements/ambal_square_img.png`)"
+              v-on:click="showAmbalPopupWindow"
+            />
+            <img
+              class="projects-img-rhythm"
+              :src="require(`../../asset/figmaElements/rhythm_run_square_img.png`)"
+              v-on:click="showRhythmPopupWindow"
+            />
+          </div>
+
+          <div class="projects-popup-window projects-ambal" v-if="allowAmbalPopup">
+            <div class="close" v-on:click="closeAmbalPopupWindow">
+              <close />
+            </div>
+            <h3>Ambal Duels</h3>
+            <p>Duel in a high fantasy land, mastering player's skills in strategic battles with 
+              simultaneous game play. Collect decks and characters to create powerful builds 
+              in this RPG inspired card game.
+            </p>
+            <a href="https://medium.com/@fragcolor/introducing-ambal-duels-the-tournament-goes-digital-45ee4f4b8f4f" target="_blank" style="text-decoration: none;">
+              <div class="project-read-more-btn">Read more</div>
+            </a>
+          </div>
+
+
+          <div class="projects-popup-window projects-rhythm"  v-if="allowRhythmPopup">
+            <div class="close" v-on:click="closeRhythmPopupWindow">
+              <close />
+            </div>            
+            <h3>Rhythm Run</h3>
+            <p>Rhythm Run is a 2d side scrolling multiplayer run and gun game where players survive and attack by
+               using rhythm. By understanding patterns within a game players are able to increase their damage, 
+               thus advancing their ranking. 
+            </p>
+            <a href="https://medium.com/@fragcolor/introducing-rhythm-run-124240ec4988" target="_blank" style="text-decoration: none;">
+              <div class="project-read-more-btn">Read more</div>
+            </a>
+          </div>
+
+
         </div>
+      </div>
 
-        <div class="description-text">
-          <h3>
-            <!-- Fragcolor was born with a vision to build the ecosystem-driven distributed
-            gaming engine that allows anyone to develop and play games, interlink
-            experiences, platforms and users.
-            <br /><br />
-            To create an environment that provides ownership rights to its users and the
-            right tools to establish new forms of monetization, independent of closed
-            systems for its creators. -->
+      <technologySec id="technology-sec" />
 
-            Our creator tools allow for absolute interoperability of game data and logic,
-            independence from market-dominant closed systems and decentralized value
-            distribution.
-          </h3>
-        </div>
+      <div id="team-sec"></div> <br /><br/><br />
+      <teamSec class="team-sec-holder" />
 
-        <div style="margin-top: 5vw">
-          <a
-            href="https://medium.com/@fragcolor/fragcolor-building-the-decentralized-gaming-engine-for-the-open-metaverse-25215b28584e"
-          >
-            <readMore />
+
+      <!-- ===================================== news sec ===================================== -->
+      <div id="blog-sec"></div>
+      <div class="homepage-news-sec">
+        <h2>Blog</h2>
+        <div class="homepage-news-sec-blog1">
+          <a href="https://medium.com/@fragcolor/introducing-ambal-duels-the-tournament-goes-digital-45ee4f4b8f4f" target="_blank">
+            <img
+              :src="require(`../../asset/figmaElements/AmbalDuelsLogo.png`)"
+              class="img_holder"
+              alt="blog"
+              id="landing-blog-img1"
+            />
           </a>
+
+          <h3>
+            Introducing Ambal Duels: The Tournament Goes Digital
+          </h3>
+          <p>
+            Following the success of Ambal Tournament strategy card game, a physical game
+            funded on Kickstarter earlier this year and praised for its innovative
+            gameplay and unique art style, Fragcolor is now bringing the Ambal experience
+            to the digital realm under Ambal Duels.
+          </p>
+        </div>
+
+        <div class="homepage-news-sec-blog2">
+          <a href="https://medium.com/@fragcolor/user-generated-content-mods-and-game-creation-systems-557d2b94b452" target="_blank">
+            <img
+              :src="require(`../../asset/figmaElements/medium_blog4.jpeg`)"
+              class="img_holder"
+              alt="blog"
+              id="landing-blog-img2"
+            />
+          </a>
+          <h3>User-generated Content: Mods and Game Creation Systems</h3>
+          <p>
+            Modding is the process of altering a game. Players of the game usually do
+            this, and it can range from small changes to complete overhauls. This
+            phenomenon has been around for decades, with fans wanting to improve the game
+            or as a form of self-expression.
+          </p>
         </div>
       </div>
-    </div>
-
-    <!-- ===================================== intro video ===================================== -->
-    <div class="intro-video-holder">
-      <img
-        id="intro-video"
-        :src="require(`../../asset/image/Fragcolor_Metaverse.png`)"
-        alt="Fragcolor Intro Video"
-      />
-    </div>
-
-    <!-- ============================== value proposition ================================= -->
-
-    <div class="value-proposition-sec" id="valueProposition">
-      <img
-        id="value-prop-grid"
-        :src="require(`../../asset/figmaElements/value_prop_grid.png`)"
-        alt="Fragcolor Intro Video"
-      />
-      <h2>Our Value Proposition</h2>
-
-      <div id="create-to-earn">
-        <h4><strong>Create-to-earn</strong></h4>
-        <p>
-          We are building an environment that provides ownership rights to its users and
-          the right tools to establish new forms of monetization, independent of closed
-          systems for its creators.
-        </p>
-      </div>
-      <valulePropElement2 id="valuePropElement2" />
-      <valulePropElement3 id="valuePropElement3" />
-
-      <div id="low-barriers-to-entry">
-        <h4><strong>Low barriers to entry</strong></h4>
-        <p>
-          In the Create to Earn model, game developers don't pay a fee to include a
-          Fragment into their own game. Instead, a percentage of royalties is allocated to
-          the original creators and contributors.
-        </p>
-      </div>
-
-      <div id="open-to-all">
-        <h4><strong>Open to all</strong></h4>
-        <p>
-          The benefits of the staking model allow for revenue sharing and generation at
-          all levels - whether one is creating, curating or staking the Fragments assets.
-        </p>
-      </div>
-      <valulePropElement1 id="valuePropElement1" />
-    </div>
-
-    <!-- ===================================== our projects ===================================== -->
-
-    <div class="homepage-projects-sec">
-      <h1>Our Projects</h1>
-
-      <div class="homepage-projects-sec-text" v-if="selectedProject1">
-        <h2>Ambal Tournament</h2>
-        <p>
-          Duel in a high fantasy land, mastering your skills in strategic battles with
-          simultaneous game play. Collect decks and characters to create powerful builds
-          in this RPG inspired card game.
-        </p>
-        <forwardArrow id="forward-arrow" v-on:click="prevProject" />
-        <backwardArrow id="backward-arrow" v-on:click="nextProject" />
-      </div>
-
-      <div class="homepage-projects-sec-text" v-if="selectedProject2">
-        <h2>Endless by Pau Rosello</h2>
-        <p>
-          Endless is an immutable real time art generated on minting by primary sale
-          buyers building on top of creator's work. The series is inspired by the Swiss
-          architect Max Bill’s "Quinze variations sur un même thème" ...
-        </p>
-        <forwardArrow id="forward-arrow" v-on:click="prevProject" />
-        <backwardArrow id="backward-arrow" v-on:click="nextProject" />
-      </div>
-
-      <div class="homepage-projects-sec-image" v-if="selectedProject1">
-        <div id="homepage-projects-sec-image1">
-          <img
-            :src="require(`../../asset/figmaElements/ambal.png`)"
-            class="homepage-projects-sec-image-holder"
-            alt="Ambal"
-          />
-        </div>
-        <div id="homepage-projects-sec-image2">
-          <img
-            :src="require(`../../asset/figmaElements/pau_infinity_drop.png`)"
-            class="homepage-projects-sec-image-holder homepage-proj-second-image"
-            alt="Pau's Infinity Drop"
-          />
-        </div>
-      </div>
-
-      <div class="homepage-projects-sec-image" v-if="selectedProject2">
-        <div id="homepage-projects-sec-image1">
-          <img
-            :src="require(`../../asset/figmaElements/pau_infinity_drop.png`)"
-            class="homepage-projects-sec-image-holder"
-            alt="Ambal"
-          />
-        </div>
-        <div id="homepage-projects-sec-image2">
-          <img
-            :src="require(`../../asset/figmaElements/ambal.png`)"
-            class="homepage-projects-sec-image-holder homepage-proj-second-image"
-            alt="Pau's Infinity Drop"
-          />
-        </div>
-      </div>
-
-      <div class="homepage-projects-sec-text-tablet ambal">
-        <h2>Ambal Tournament</h2>
-        <p>
-          Duel in a high fantasy land, mastering your skills in strategic battles with
-          simultaneous game play. Collect decks and characters to create powerful builds
-          in this RPG inspired card game.
-        </p>
-        <!-- <forwardArrow id="forward-arrow" v-on:click="prevProject" />
-        <backwardArrow id="backward-arrow" v-on:click="nextProject" /> -->
-      </div>
-
-      <div class="homepage-projects-sec-text-tablet pau-infinity">
-        <h2>Endless by Pau Rosello</h2>
-        <p>
-          Endless is an immutable real time art generated on minting by primary sale
-          buyers building on top of creator's work. The series is inspired by the Swiss
-          architect Max Bill’s "Quinze variations sur un même thème" ...
-        </p>
-        <!-- <forwardArrow id="forward-arrow" v-on:click="prevProject" />
-        <backwardArrow id="backward-arrow" v-on:click="nextProject" /> -->
-      </div>
-
-      <div class="homepage-projects-sec-showmore">
-        <a href="/projects">
-          <showMore />
+      
+      <a href="https://medium.com/@fragcolor" target="_blank" style="text-decoration: none;">
+          <div class="blog-read-more-btn">Read more</div>
         </a>
-      </div>
-    </div>
 
-    <!-- ===================================== quote ===================================== -->
-
-    <div class="homepage-quote-sec" v-if="selectedQuote1">
-      <quoteSign id="homepage-quote-sec-quote" />
-      <h3 id="homepage-quote-sec-text">
-        With a strong team with extensive game development background and solid products,
-        Fragcolor is going to raise the bar for blockchain gaming projects in the crypto
-        space. This investment marks our continued focus in the blockchain game ecosystem.
-      </h3>
-      <h3 id="homepage-quote-sec-investor">DWEb3</h3>
-      <p id="homepage-quote-sec-investor-desc">Lorem ipsum dolor</p>
-
-      <div class="pagination">
-        <forwardArrow id="homepage-quote-sec-forward-arrow" v-on:click="prevQuote" />
-        <div class="pagination-blocks-selected"></div>
-        <div class="pagination-blocks"></div>
-        <backwardArrow id="homepage-quote-sec-backward-arrow" v-on:click="nextQuote" />
-      </div>
-    </div>
-
-    <div class="homepage-quote-sec" v-if="selectedQuote2">
-      <quoteSign id="homepage-quote-sec-quote" />
-      <h3 id="homepage-quote-sec-text">
-        Fragments Foundation organically combines Metaverse and Web3 at such a point in
-        time, building a set of user-friendly game development engines and crypto native
-        solutions. The shackles of centralized games no longer restrict users; instead,
-        they can devote themselves to develop and experience games in the metaverse, thus
-        fully enjoying the value brought about by Web3.
-      </h3>
-      <h3 id="homepage-quote-sec-investor">ArkStream Capital</h3>
-      <p id="homepage-quote-sec-investor-desc">Lorem ipsum dolor</p>
-
-      <div class="pagination">
-        <forwardArrow id="homepage-quote-sec-forward-arrow" v-on:click="prevQuote" />
-        <div class="pagination-blocks"></div>
-        <div class="pagination-blocks-selected"></div>
-        <backwardArrow id="homepage-quote-sec-backward-arrow" v-on:click="nextQuote" />
-      </div>
-    </div>
-
-    <!-- ===================================== newsletter ===================================== -->
-    <!-- hide for now, use our old newsletter signup window -->
-    <!-- <newsLetterElement1 id="newsletter-sec-element1" />
-    <newsLetterElement2 id="newsletter-sec-element2" />
-    <newsLetterElement3 id="newsletter-sec-element3" />
-
-    <div class="homepage-newsletter-sec">
-      <newsletterGrid id="newsletter-grid-homepage" style="position: absolute;" />
-      <h1>Join Our Newsletter</h1>
-      <p>
-        Sign up to stay up to date on our latest news, open calls, product updates and
-        special promotions.
-      </p>
-      <div class="newsletter-email">
-        <b-form @submit="onSubmit">
-          <b-form-group id="input-group-1" label-for="input-1">
-            <b-form-input
-              id="input-1"
-              v-model="email"
-              type="email"
-              placeholder="Email"
-              required
-            ></b-form-input>
-          </b-form-group>
-
-          <b-button type="submit" variant="primary">Subscribe</b-button>
-        </b-form>
-      </div>
-    </div> -->
-
-    <!-- ===================================== news sec ===================================== -->
-
-    <div class="homepage-news-sec">
-      <h2>Latest news</h2>
-      <div class="homepage-news-sec-blog1">
-        <!-- <div class="img_holder"></div> -->
-        <img
-          :src="require(`../../asset/image/fragcolor_background.png`)"
-          class="img_holder"
-          alt="blog"
-          id="landing-blog-img"
-        />
-        <h3>
-          Fragcolor: Building the Decentralized Gaming Engine for the Open Metaverse
-        </h3>
-        <p>
-          Fragcolor has been born from this same vision — to build the ecosystem-driven
-          decentralized gaming engine that allows anyone to develop and play games,
-          interlink experiences, platforms and users.
-        </p>
-      </div>
-
-      <div class="homepage-news-sec-blog2">
-        <!-- <div class="img_holder"></div> -->
-        <img
-          :src="require(`../../asset/image/fragcolor_blog2.png`)"
-          class="img_holder"
-          alt="blog"
-        />
-        <h3>Create to Earn Economy and the Bottom-up Fragment Model</h3>
-        <p>
-          “Create to Earn”, a creator-centric Play to Earn analogy, is introduced by
-          Fragcolor to describe the new economic possibilities it is building for game
-          asset creators, which, in turn, provide an alternative path of monetization.
-        </p>
-      </div>
-      <div id="news-readmore-btn">
-        <a href="/blog">
-          <readMore />
+        <a href="#">
+            <img
+              :src="require(`../../asset/figmaElements/scroll_to_top.png`)"
+              class="scroll-to-top"
+          />
         </a>
-      </div>
     </div>
   </div>
 </template>

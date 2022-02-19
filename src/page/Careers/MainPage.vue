@@ -135,7 +135,7 @@
             <newsletterGrid id="career-form-grid" style="position: absolute" />
 
             <div class="careers-sec-form">
-              <b-form id="resume-form" enctype="multipart/form-data" @submit="onSubmit">
+              <b-form id="resume-form" enctype="multipart/form-data" @submit="onSubmitSeletctPosition">
                 <div class="careers-sec-form-floatLeft">
                   <b-form-group id="careers-sec-form-firstName" label-for="input-1">
                     <b-form-input
@@ -197,10 +197,10 @@
                     ></b-form-textarea>
                   </b-form-group>
                   <b-button type="submit" variant="primary" class="send-resume-btn-main"
-                    >Send cv</b-button
+                    >Send CV</b-button
                   >
                   <b-button type="submit" variant="primary" class="send-resume-btn-tablet"
-                    >Send cv</b-button
+                    >Send CV</b-button
                   >
                 </div>
 
@@ -403,13 +403,13 @@
                 enctype="multipart/form-data"
                 @submit="onSubmit"
               >
-                <div class="careers-sec-form refer-friend">
+                <!-- <div class="careers-sec-form refer-friend">
                   <b-button type="submit" variant="primary">Send cv</b-button>
 
                   <div style="display: inline">
                     <p>Refer a Friend</p>
                   </div>
-                </div>
+                </div> -->
                 <div class="careers-sec-form-floatLeft">
                   <b-form-group id="careers-sec-form-firstName" label-for="input-1">
                     <b-form-input
@@ -418,6 +418,7 @@
                       placeholder="First name"
                       required
                       class="form-input"
+                      name="firstname"
                     ></b-form-input>
                   </b-form-group>
 
@@ -428,6 +429,7 @@
                       placeholder="Last name"
                       required
                       class="form-input"
+                      name="lastname"
                     ></b-form-input>
                   </b-form-group>
 
@@ -439,6 +441,7 @@
                       placeholder="Email"
                       required
                       class="form-input"
+                      name="email"
                     ></b-form-input>
                   </b-form-group>
                 </div>
@@ -451,6 +454,7 @@
                       placeholder="LinkedIn / Github / Personal website"
                       required
                       class="form-input"
+                      name="website"
                     ></b-form-input>
                   </b-form-group>
 
@@ -463,10 +467,11 @@
                       rows="3"
                       max-rows="6"
                       class="form-input"
+                      name="message"
                     ></b-form-textarea>
                   </b-form-group>
                   <b-button type="submit" variant="primary" class="send-resume-btn"
-                    >Send cv</b-button
+                    >Send CV</b-button
                   >
                 </div>
 
@@ -478,6 +483,7 @@
                     name="checkbox-1"
                     value="accepted"
                     unchecked-value="not_accepted"
+                    required
                   >
                     I agree to Terms and Privacy
                   </b-form-checkbox>
@@ -497,7 +503,7 @@
                 </div>
 
                 <b-button type="submit" variant="primary" class="send-resume-btn-tablet"
-                  >Send cv</b-button
+                  >Send CV</b-button
                 >
               </b-form>
             </div>

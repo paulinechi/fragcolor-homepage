@@ -11,6 +11,16 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+// const PrerenderSPAPlugin = require('prerender-spa-plugin')
+// const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
+
+// const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser'});
+// const page = await browser.newPage();
+// await page.goto('https://fragcolor.com/Fragments-Foundation-Raises-to-Expand-Fragcolor');
+// await browser.close();
+
+
+
 module.exports = ({ config, isDevelopment, buildType }) => (webpackConfig) => {
   /*
    * ------------------------------------------------
@@ -61,6 +71,15 @@ module.exports = ({ config, isDevelopment, buildType }) => (webpackConfig) => {
             cache: true,
           },
     ),
+    // new PrerenderSPAPlugin({
+    // //   // Required - The path to the webpack-outputted app to prerender.
+    //   staticDir: path.join(__dirname, 'dist'),
+    // //   // Required - Routes to render.
+    //   routes: [ '/', '/Fragments-Foundation-Raises-to-Expand-Fragcolor'],
+    // //   // renderer: new Renderer({
+    // //   //   headless: true
+    // //   // })
+    // }),
   ];
 
   if (isDevelopment) {

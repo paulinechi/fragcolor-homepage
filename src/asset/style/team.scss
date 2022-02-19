@@ -1,7 +1,23 @@
+.team-sec-holder {
+    z-index: 10;
+    position: relative;
+}
+
+.team-page-members .row {
+    display: flex;
+    overflow: scroll;
+    width: 95%;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+}
+
 .team-page-member-sec {
-    width: 24vw;
-    height: 37vw;
+    // width: 24vw;
+    // height: 41vw;
     // border: 1px solid white;
+
+    width: 352px;
+    height: 536px;
 
     /* Auto Layout */
     background: linear-gradient(#000, #000) padding-box,
@@ -22,12 +38,137 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 2vw;
+    padding: 24px;
     margin: 1.3vw;
 
     border: 2px solid transparent;
     border-radius: 8px !important;
     font-family: "Sora", sans-serif !important;
+}
+
+.team-join-us-btn {
+    /* Auto Layout */
+    background: linear-gradient(#000, #000) padding-box,
+      linear-gradient(
+          70.71deg,
+          #8f67e2 -11.82%,
+          #7d89e5 2.93%,
+          #6aace9 20.96%,
+          #5ec1eb 35.76%,
+          #5ac9ec 45.4%,
+          #51eabd 103.27%
+        )
+        border-box;
+  
+    color: #5ec1eb;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 48px;
+  
+    position: absolute;
+    width: 354px;
+    height: 85px;
+  
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+    font-family: "Sora", sans-serif !important;
+    cursor: pointer;
+
+    margin-left: calc((100% - 354px) / 2);
+    margin-top: 55px;
+    padding: 17px 77px;
+}
+  
+.team-join-us-btn:hover {
+    background: 
+      linear-gradient(
+          70.71deg,
+          #8f67e2 -11.82%,
+          #7d89e5 2.93%,
+          #6aace9 20.96%,
+          #5ec1eb 35.76%,
+          #5ac9ec 45.4%,
+          #51eabd 103.27%
+        );
+      border: none;
+  
+    color: white;
+}
+
+.blog-read-more-btn {
+    background: linear-gradient(#000, #000) padding-box,
+    linear-gradient(
+        70.71deg,
+        #8f67e2 -11.82%,
+        #7d89e5 2.93%,
+        #6aace9 20.96%,
+        #5ec1eb 35.76%,
+        #5ac9ec 45.4%,
+        #51eabd 103.27%
+      )
+      border-box;
+
+    color: #5ec1eb;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 48px;
+
+    position: relative;
+    width: 354px;
+    height: 85px;
+
+    border: 2px solid transparent;
+    border-radius: 8px !important;
+    font-family: "Sora", sans-serif !important;
+    cursor: pointer;
+
+    margin-left: calc((100% - 354px) / 2);
+    margin-top: 55px;
+    padding: 17px 118px;
+}
+
+.blog-read-more-btn:hover {
+    background: 
+      linear-gradient(
+          70.71deg,
+          #8f67e2 -11.82%,
+          #7d89e5 2.93%,
+          #6aace9 20.96%,
+          #5ec1eb 35.76%,
+          #5ac9ec 45.4%,
+          #51eabd 103.27%
+        );
+      border: none;
+  
+    color: white;
+}
+
+
+.project-read-more-btn {
+    background: linear-gradient(90.64deg, #8758fe -12.21%, #b264fe 24.49%, #ff78ff 83.26%);
+    color: white;
+    position: relative;
+    border-radius: 8px !important;
+    font-family: "Sora", sans-serif !important;
+    cursor: pointer;
+
+    margin-top: 55px;
+    padding: 25px;
+    width: 226px;
+    height: 82px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    
+}
+
+.scroll-to-top {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 92px;
+    margin-bottom: 60px;
 }
 
 .team-page h1 {
@@ -65,12 +206,12 @@
 }
 
 .team-page-about {
-    margin-top: 8vw;
+    margin-top: 15vh;
 }
 
 .team-page-members {
     color: white;
-    width: 80vw;
+    width: 95vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -88,21 +229,92 @@
 }
 
 .team-page-member-sec-pic {
-    width: 20vw;
-    height: 20vw;
+    // width: 20vw;
+    // height: 20vw;
+    width: 304px;
+    height: 304px;
     object-fit: cover;
 }
 
 .team-page-member-sec p {
     font-size: 14px;
     line-height: 24px;
-    width: 16vw;
-    height: 8vw;
+    width: 224px;
+    height: 110px;
+}
+
+@media screen and (min-width: 1930px) {
+    .team-page-members {
+        width: 1440px;
+    }
+
+    .team-page-description {
+        width: 900px;
+    }
+
+    .team-page-member-sec {
+        width: 415px;
+    }
+
+    .team-page-member-sec-pic {
+        width: 370px;
+    }
+
+    .team-page-member-sec {
+        padding: 20px;
+    }
+
+    .team-page-member-sec {
+        height: 600px;
+    }
+    .blog-read-more-btn {
+        margin-left: calc((1440px - 354px) / 2);
+    }
+    .team-page-member-sec p {
+        height: 10vh;
+    }
+
+    .team-page-advisors {
+        width: 1440px;
+    }
+
+    .team-page-advisor-sec {
+        width: 295px;
+    }
+
+    .team-page-advisor-sec-pic {
+        width: 255px;
+    }
+
+    .team-page-advisor-sec p {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .team-page-member-sec h4 {
+        line-height: 20px !important;
+        margin-bottom: 6px;
+        height: 36px;
+    }
+
+    .team-page-member-sec {
+        // height: 47vw !important;
+        height: fit-content;
+    }
+
+    .team-page-advisor-sec {
+        height: 47vw !important;
+    }
+
+    .team-page-member-sec p {
+        height: 15vw !important;
+    }
 }
 
 @media screen and (max-width: 780px) {
     .team-page-members {
-        display: none;
+        // display: none;
     }
 
     .team-page-advisors {
@@ -118,27 +330,32 @@
         width: 100vw;
         // margin-left: auto;
         // margin-right: auto;
-        margin-top: 15vw;
+        // margin-top: 15vw;
+        margin-top: 10vw;
     }
 
     .team-page-advisors-tablet {
         display: inline-block;
         width: 100vw;
+        // height: 275vh;
+        height: fit-content;
     }
 
     .team-page-investor-tablet {
         display: inline-block;
     }
 
-    .row {
-        width: 86vw;
+    .team-page .row {
+        width: 86vw !important;
         margin-left: auto;
         margin-right: auto;
     }
 
     .team-page-member-sec {
-        width: 40vw;
-        height: 56vw;
+        // width: 40vw;
+        width: 250px;
+        // height: 56vw;
+        height: fit-content;
     }
 
     .team-page-member-sec p {
@@ -157,8 +374,10 @@
     }
 
     .team-page-member-sec-pic {
-        width: 35vw;
-        height: 30vw;
+        // width: 35vw;
+        // height: 30vw;
+        width: 202px;
+        height: 180px;
     }
 
     .team-page-social-icon-tablet {
@@ -213,13 +432,72 @@
         height: 12vw !important;
         margin-bottom: 2vw;
         margin-right: 2vw;
+        padding: 1vw !important;
     }
 
-    #investor6 {
+    #investor5 img {
+        width: 29vw;
+        height: auto;
+    }
+
+    #investor9 {
         width: 40vw !important;
         height: 12vw !important;
         margin-bottom: 2vw;
         margin-right: 2vw;
+        padding: 1vw !important;
+    }
+
+    #investor9 img {
+        width: 18vw !important;
+        height: auto !important;
+    }
+
+    #investor10 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+        padding: 1vw !important;
+    }
+
+    #investor10 img {
+        width: 38vw !important;
+        height: auto !important;
+    }
+
+    #investor11 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+        padding: 1vw !important;
+    }
+
+    #investor11 img {
+        width: 38vw !important;
+        height: auto !important;
+    }
+
+    #investor6 {
+        // width: 40vw !important;
+        // height: 12vw !important;
+        // margin-bottom: 2vw;
+        // margin-right: 2vw;
+
+        // height: 18vw !important;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        width: 55vw !important;
+        margin-bottom: 2vw;
+    }
+
+    #investor6 img {
+        height: 13vh !important;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #investor7 {
@@ -229,8 +507,25 @@
         margin-right: 2vw;
     }
 
+    #investor7 img {
+        width: 33vw !important;
+    }
+
+    #investor8 {
+        width: 40vw !important;
+        height: 12vw !important;
+        margin-bottom: 2vw;
+        margin-right: 2vw;
+    }
+
+    #investor8 img {
+        height: auto;
+        width: 36vw;
+        padding: 2vw;
+    }
+
     .team-page-investor-holder {
-        width: 82vw;
+        width: 84vw !important;
     }
 }
 
@@ -253,6 +548,8 @@
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
+    height: fit-content;
+    margin-bottom: 6vh;
 }
 
 #advisors {
@@ -265,7 +562,8 @@
 
 .team-page-advisor-sec {
     width: 17.4vw;
-    height: 29vw;
+    // height: 29vw;
+    height: 64vh;
     // border: 1px solid white;
 
     /* Auto Layout */
@@ -365,8 +663,8 @@
 #investor1 {
     // width: 446px;
     // height: 104px;
-    padding: 20px;
-
+    // padding: 20px;
+    padding: 11px;
     width: 32vw;
     height: 10vh;
 }
@@ -379,7 +677,8 @@
 
 #investor3 {
     width: 25vw;
-    padding: 22.5px;
+    // padding: 22.5px;
+    padding: 11px;
     height: 10vh;
 }
 #investor4 {
@@ -388,33 +687,136 @@
     height: 11vh;
     padding: 1vw;
 }
-#investor5 {
-    width: 23vw;
-    padding: 18px;
+
+#investor6 {
+    // width: 184px;
+    // padding: 9px 18px;
+    // height: 11vh;
+    // width: 12vw;
+
+    padding: 9px 18px;
+    // height: 14vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+    height: fit-content;
+}
+
+#investor6 img {
+    height: 12vh;
+}
+
+#investor7 {
+    width: 334px;
+    // padding: 21px 32px;
     height: 11vh;
+    width: 23vw;
+    padding: 1vw 1.5vw;
+}
+
+#investor7 img {
+    // margin-left: auto;
+    // margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 17vw;
+    height: 9vh;
+    object-fit: scale-down;
+    padding: 1vw;
+}
+
+#investor8 {
+    padding: 9px 18px;
+    height: 11vh;
+    width: 36vw;
+}
+
+#investor8 img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 31vw;
+    // padding: 2vw;
+}
+
+#investor5 {
+    // width: 23vw;
+    // padding: 18px;
+    // height: 11vh;
+    // width: auto;
+    padding: 1.5vh 1vw;
+    height: 11vh;
+    // margin-left: auto;
+    // margin-right: auto;
+    // width: 40vw;
+    // width: 25vw;
+    width: 18vw;
 }
 
 #investor5 img {
     margin-left: auto;
     margin-right: auto;
+    // height: 8vh;
+    height: 7vh;
+    width: 16vw;
+    object-fit: scale-down;
 }
 
-#investor6 {
-    width: 184px;
+#investor9 {
     padding: 9px 18px;
     height: 11vh;
-    width: 12vw;
+    // width: 38vw;
+    // width: 20vw;
+    width: 14vw;
 }
-#investor7 {
-    width: 334px;
-    padding: 21px 32px;
+
+#investor9 img {
+    margin-left: auto;
+    margin-right: auto;
+    // width: 14vw;
+    // height: 8vh;
+    height: 9vh;
+    width: 10vw;
+    object-fit: scale-down;
+    // padding: 2vw;
+}
+
+#investor10 {
+    padding: 9px 18px;
     height: 11vh;
+    // width: 32vw;
+    width: 21vw;
+}
+
+#investor10 img {
+    margin-left: auto;
+    margin-right: auto;
+    // width: 28vw;
+    // height: 9vh;
+    // // padding: 2vw;
+    // object-fit: scale-down;
+
+    width: 19vw;
+    height: 8vh;
+    // padding: 2vw;
+    object-fit: scale-down;
+}
+
+#investor11 {
+    padding: 9px 18px;
+    height: 11vh;
+    // width: 32vw;
     width: 23vw;
 }
 
-#investor7 img {
+#investor11 img {
     margin-left: auto;
     margin-right: auto;
+    // width: 28vw;
+    width: 20vw;
+    height: 9vh;
+    // padding: 2vw;
+    object-fit: scale-down;
 }
 
 .team-page-investor-holder {
@@ -425,8 +827,8 @@
 }
 
 .team-page-social-icon {
-    margin-right: 2vw;
-    width: 2vw;
+    margin-right: 41px;
+    width: 22px;
 }
 
 @media screen and (max-width: 430px) {
@@ -440,15 +842,19 @@
 
     .team-page-description {
         width: 80vw;
-        height: 40vh;
+        // height: 40vh;
+        height: fit-content;
     }
 
     .team-page-member-sec {
         width: 82vw;
-        height: 60vh;
+        // height: 60vh !important;
+        height: 500px;
         padding: 4vw;
     }
-
+    .team-page-members-tablet {
+        margin-top: 30vw;
+    }
     .team-page-member-sec-pic {
         width: 72vw;
         height: 35vh;
@@ -457,12 +863,27 @@
 
     .team-page-member-sec p {
         width: 65vw;
-        height: 20vw;
+        // height: 20vw !important;
+        height: fit-content !important;
     }
 
     .team-page .star-bg-image {
         height: 855vh !important;
         width: 100%;
+    }
+
+    .team-join-us-btn {
+        width: 242px;
+        padding: 0 13px;
+        height: 50px;
+        margin-left: calc((100% - 225px) / 2);
+    }
+
+    .blog-read-more-btn {
+        width: 235px;
+        padding: 0px 54px;
+        height: 50px;
+        margin-left: calc((100% - 225px) / 2) !important;
     }
 
     .grid-bg-image {
@@ -501,6 +922,7 @@
         margin-bottom: 10vw;
         margin-left: 0;
     }
+
     #investor5 {
         width: 82vw !important;
         height: auto !important;
@@ -512,6 +934,49 @@
     #investor5 img {
         margin-left: auto;
         margin-right: auto;
+        width: 25vw !important;
+    }
+
+    #investor9 {
+        width: 82vw !important;
+        height: auto !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+
+    #investor9 img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 25vw !important;
+    }
+
+    #investor10 {
+        width: 82vw !important;
+        height: auto !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+
+    #investor10 img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vw !important;
+    }
+
+    #investor11 {
+        width: 82vw !important;
+        height: auto !important;
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+    }
+
+    #investor11 img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vw !important;
     }
 
     #investor6 {
@@ -520,6 +985,12 @@
         padding: 2vw;
         margin-bottom: 10vw;
         margin-left: 0;
+
+        // height: 12vw !important;
+        // margin-left: auto;
+        // margin-right: auto;
+        // width: 55vw !important;
+        // margin-bottom: 2vw;
     }
 
     #investor6 img {
@@ -533,6 +1004,18 @@
         margin-left: 0;
         width: 82vw !important;
         height: auto !important;
+    }
+
+    #investor8 {
+        padding: 2vw;
+        margin-bottom: 10vw;
+        margin-left: 0;
+        width: 82vw !important;
+        height: auto !important;
+    }
+
+    #investor8 img {
+        width: 80vw;
     }
 
     #investor4 {

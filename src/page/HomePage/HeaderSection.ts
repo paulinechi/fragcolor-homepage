@@ -17,6 +17,8 @@ import github from '../../asset/figmaElements/github.svg';
 import angelList from '../../asset/figmaElements/AngelList_logo.svg';
 import opensea from '../../asset/figmaElements/opensea.svg';
 
+import headerLogo from '../../asset/figmaElements/fragcolor_logo_color_white.svg';
+
 
 @Component({
   name: 'nft-shop-header',
@@ -38,7 +40,8 @@ import opensea from '../../asset/figmaElements/opensea.svg';
     linkedIn,
     github,
     angelList,
-    opensea
+    opensea,
+    headerLogo
   },
   directives: {
     'b-modal': VBModal,
@@ -55,14 +58,14 @@ export default class HeaderSection extends Vue {
   public selectedProj: boolean = false;
   public selectedBlog: boolean = false;
   public selectedCareer: boolean = false;
+  public selectedDocumentation: boolean = false;
+  public selectedTeam: boolean = false;
 
   public showDropDownMenu: boolean = false;
 
 
   public showPopupWindow(): void {
     this.allowPopup = true;
-    // var containerElement = document.getElementsByClassName('body');
-    // containerElement.Add
   }
 
   public closePopupWindow(): void {
@@ -82,15 +85,16 @@ export default class HeaderSection extends Vue {
     this.selectedProj = false;
     this.selectedBlog = false;
     this.selectedCareer = false;
+    this.selectedDocumentation = false;
+    this.selectedTeam = false;
   }
 
   public created() {
     this.resetMenuTabColor();
 
-    if (window.location.href.indexOf("team") > -1) {
+    if (window.location.href.indexOf("about") > -1) {
       this.selectedAbout = true;
     } else if (window.location.href.indexOf("technology") > -1) {
-      console.log('contain tech');
       this.selectedTech = true;
     } else if (window.location.href.indexOf("projects") > -1) {
       this.selectedProj = true;
@@ -98,7 +102,10 @@ export default class HeaderSection extends Vue {
       this.selectedBlog = true;
     }else if (window.location.href.indexOf("careers") > -1) {
       this.selectedCareer = true;
-    }else {
+    }else if (window.location.href.indexOf("team") > -1) {
+      this.selectedTeam = true;
+    }
+    else {
       this.selectedHome = true
     }
   }
