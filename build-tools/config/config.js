@@ -66,7 +66,7 @@ module.exports = {
 
   devServer: {
     indexHtml: path.resolve(__dirname, '../../dist/index.html'),
-    port: process.env.PORT || 8082,
+    port: process.env.PORT || 8086,
     proxyTable: {},
     autoOpenBrowser: true,
     useHttps: false,

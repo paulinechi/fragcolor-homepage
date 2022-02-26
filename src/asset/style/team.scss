@@ -3,21 +3,30 @@
     position: relative;
 }
 
-.team-page-members .row {
-    display: flex;
-    overflow: scroll;
-    width: 95%;
-    flex-wrap: nowrap;
-    overflow-y: hidden;
+.team-page-members {
+    display: none;
+}
+
+
+.team-page-members-desktop .row {
+    // display: flex;
+    // overflow: scroll;
+    // width: 95%;
+    // flex-wrap: nowrap;
+    // overflow-y: hidden;
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .team-page-member-sec {
-    // width: 24vw;
-    // height: 41vw;
+    width: 24vw;
+    height: 41vw;
     // border: 1px solid white;
 
-    width: 352px;
-    height: 536px;
+    // width: 352px;
+    // height: 536px;
 
     /* Auto Layout */
     background: linear-gradient(#000, #000) padding-box,
@@ -38,7 +47,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    // padding: 24px;
+    padding: 1.4vw;
+
     margin: 1.3vw;
 
     border: 2px solid transparent;
@@ -66,7 +77,8 @@
     line-height: 48px;
   
     position: absolute;
-    width: 354px;
+    width: fit-content;
+    width: auto;
     height: 85px;
   
     border: 2px solid transparent;
@@ -114,7 +126,7 @@
     line-height: 48px;
 
     position: relative;
-    width: 354px;
+    width: fit-content;
     height: 85px;
 
     border: 2px solid transparent;
@@ -123,7 +135,7 @@
     cursor: pointer;
 
     margin-left: calc((100% - 354px) / 2);
-    margin-top: 55px;
+    margin-top: 80px;
     padding: 17px 118px;
 }
 
@@ -147,7 +159,7 @@
 .project-read-more-btn {
     background: linear-gradient(90.64deg, #8758fe -12.21%, #b264fe 24.49%, #ff78ff 83.26%);
     color: white;
-    position: relative;
+    position: absolute;
     border-radius: 8px !important;
     font-family: "Sora", sans-serif !important;
     cursor: pointer;
@@ -156,8 +168,8 @@
     padding: 25px;
     width: 226px;
     height: 82px;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
@@ -229,18 +241,20 @@
 }
 
 .team-page-member-sec-pic {
-    // width: 20vw;
-    // height: 20vw;
-    width: 304px;
-    height: 304px;
+    width: 20.5vw;
+    height: 20vw;
+    // width: 304px;
+    // height: 304px;
     object-fit: cover;
 }
 
 .team-page-member-sec p {
     font-size: 14px;
     line-height: 24px;
-    width: 224px;
-    height: 110px;
+    // width: 224px;
+    // height: 110px;
+    width: 19vw;
+    height: 10vw;
 }
 
 @media screen and (min-width: 1930px) {
@@ -253,11 +267,12 @@
     }
 
     .team-page-member-sec {
-        width: 415px;
+        width: 413px;
     }
 
     .team-page-member-sec-pic {
         width: 370px;
+        height: 340px;
     }
 
     .team-page-member-sec {
@@ -291,7 +306,7 @@
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1110px) {
     .team-page-member-sec h4 {
         line-height: 20px !important;
         margin-bottom: 6px;
@@ -308,13 +323,25 @@
     }
 
     .team-page-member-sec p {
-        height: 15vw !important;
+        height: 18vw !important;
     }
 }
 
 @media screen and (max-width: 780px) {
     .team-page-members {
-        // display: none;
+        display: inline;
+    }
+
+    .team-page-members-desktop {
+        display: none;
+    }
+
+    .team-page-members .row {
+        display: flex;
+        overflow: scroll;
+        width: 95%;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
     }
 
     .team-page-advisors {
@@ -376,7 +403,7 @@
     .team-page-member-sec-pic {
         // width: 35vw;
         // height: 30vw;
-        width: 202px;
+        width: 228px;
         height: 180px;
     }
 
@@ -538,7 +565,7 @@
 
 #core-contributors {
     margin-bottom: 3vw;
-    margin-top: 3vw;
+    margin-top: 100px;
     font-weight: bold;
     font-size: 40px;
     line-height: 56px;
@@ -826,8 +853,12 @@
     margin-bottom: 8vw;
 }
 
-.team-page-social-icon {
+.team-page-social-icon-holder {
     margin-right: 41px;
+}
+
+.team-page-social-icon {
+    // margin-right: 41px;
     width: 22px;
 }
 
@@ -865,6 +896,7 @@
         width: 65vw;
         // height: 20vw !important;
         height: fit-content !important;
+        margin-bottom: 20px;
     }
 
     .team-page .star-bg-image {
@@ -873,14 +905,14 @@
     }
 
     .team-join-us-btn {
-        width: 242px;
+        width: fit-content;
         padding: 0 13px;
         height: 50px;
         margin-left: calc((100% - 225px) / 2);
     }
 
     .blog-read-more-btn {
-        width: 235px;
+        width: fit-content;
         padding: 0px 54px;
         height: 50px;
         margin-left: calc((100% - 225px) / 2) !important;
@@ -1031,5 +1063,9 @@
         height: 23vw !important;
         margin-bottom: 10vw;
         margin-left: 0;
+    }
+
+    .project-read-more-btn {
+        margin-left: calc( (100% - 226px) / 2);
     }
 }

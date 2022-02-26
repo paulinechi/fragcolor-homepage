@@ -349,11 +349,12 @@ export default class DescriptionBody extends Vue {
 
   public showAmbalPopupWindow(): void {
     this.allowAmbalPopup = true;
+    this.hideRhythmPopupWhenClick();
   }
 
   public showRhythmPopupWindow(): void {
     this.allowRhythmPopup = true;
-
+    this.hideAmbalPopupWhenClick();
   }
   public closeAmbalPopupWindow(): void {
     this.allowAmbalPopup = false;
@@ -364,13 +365,28 @@ export default class DescriptionBody extends Vue {
   }
 
 
-  public hidePopupWhenClick(): void {
-    var container = document.getElementsByClassName('container')[0];
-    document.addEventListener('click', function( event ) {
-      if (container !== event.target && !container.contains(event.target as Node)) {    
-        console.log('clicking outside the div');
-      }
-    });
+  public hideAmbalPopupWhenClick(): void {
+    var ambal = document.getElementById('project-ambal-card');
+    if(ambal) {
+      ambal.style.display = 'none';
+    }
+
+    var rhythm = document.getElementById('project-rhythm-card');
+    if(rhythm) {
+      rhythm.style.display = '';
+    }
+  }
+
+  public hideRhythmPopupWhenClick(): void {
+    var rhythm = document.getElementById('project-rhythm-card');
+    if(rhythm) {
+      rhythm.style.display = 'none';
+    }
+
+    var ambal = document.getElementById('project-ambal-card');
+    if(ambal) {
+      ambal.style.display = '';
+    }
   }
 
 }

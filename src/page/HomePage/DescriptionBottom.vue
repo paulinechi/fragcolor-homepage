@@ -51,11 +51,13 @@
       </div> -->
 
       <div class="footer-submenu">
-          <p class="footerMenuStyle footer-email-link">
+          <a href="https://docs.fragcolor.xyz/" target="_blank" class="footerMenuStyle" id="terms-of-use"> Documentation </a>
+
+          <!-- <p class="footerMenuStyle footer-email-link">
             <a href="mailto:ask@fragcolor.com">ask@fragcolor.com</a>
-          </p>        
-        <!-- <a href="#" class="footerMenuStyle" id="terms-of-use"> Terms of Use </a>
-        <a href="#" class="footerMenuStyle" id="privacy-policy"> Privacy Policy </a> -->
+          </p>         -->
+        <a href="mailto:ask@fragcolor.com" class="footerMenuStyle footer-email-link"> ask@fragcolor.com </a>
+        <!-- <a href="#" class="footerMenuStyle" id="privacy-policy"> Privacy Policy </a> -->
       </div>
 
       <div class="footer-copyright">

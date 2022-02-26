@@ -67,11 +67,11 @@
 }
 
 .technology-sec h2 {
-    width: 38vw;
+    width: 100%;
     // height: 18vh;
     height: fit-content;
-    padding-bottom: 5vh;
-    top: 9vw;
+    // padding-bottom: 5vh;
+    // top: 5vw;
 
     font-weight: bold;
     font-size: 40px;
@@ -93,6 +93,7 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    margin-top: 100px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -139,7 +140,7 @@
 
 .hasten {
     height: 600px;
-    margin-top: 2vh;
+    // margin-top: 2vh;
     position: relative;
 }
 
@@ -151,6 +152,15 @@
     height: 600px;
 }
 
+// .ambal .text {
+//     position: relative;
+//     width: 36vw;
+//     height: 30vh;
+//     left: 11.5vw;
+//     top: 10.5vh;
+//     display: inline-block;
+// }
+
 .hasten .text {
     position: absolute;
     width: 36vw;
@@ -159,18 +169,121 @@
     top: 10.5vh;
 }
 
+
+// .ambal .image {
+//     // float: right;
+//     position: relative;
+//     left: 53%;
+//     // right: -18.68%;
+//     top: 16.25%;
+//     bottom: 68.17%;
+//     display: inline-block;
+// }
+
+.sound-game-image {
+    top: 16.25%;
+    bottom: 68.17%;
+    float: left; 
+}
+
 .hasten .image {
     // float: right;
     position: absolute;
-    left: 53%;
+    left: 51%;
     // right: -18.68%;
     top: 16.25%;
     bottom: 68.17%;
 }
 
+.ambal img {
+    margin-left: 5vw;
+    width: 400px;
+}
+
+.sound-game img {
+    width: 400px;
+}
+
+.ambal .text {
+    // top: 20vh;
+    top: 16.25%;
+    bottom: 68.17%;
+}
+
+.sound-game .text {
+    top: 16.25% !important;
+    bottom: 68.17%;
+}
+
+.ambal .text {
+    width: 32vw;
+}
+
 .hasten svg {
     // width: 47%;
 }
+
+.project-sec h2 {
+    width: 100%;
+    height: fit-content;
+    // padding-bottom: 5vh;
+    top: 0;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    background-image: linear-gradient(70.71deg, #8f67e2 -11.82%, #7d89e5 2.93%, #6aace9 20.96%, #5ec1eb 35.76%, #5ac9ec 45.4%, #51eabd 103.27%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 250px;
+}
+
+.ambal {
+    width: 100%;
+    height: 600px;
+}
+
+.sound-game {
+    height: 600px;
+}
+
+// .ambal h1{
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 40px !important;
+//     line-height: 56px;
+//     background-size: 100%;
+//     width: 150px;
+
+//     background-image: linear-gradient(90.64deg, #8758fe -12.21%, #b264fe 24.49%, #ff78ff 83.26%);
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+
+// .sound-game h1{
+//     font-style: normal;
+//     font-weight: bold;
+//     font-size: 40px !important;
+//     line-height: 56px;
+//     background-size: 100%;
+//     // width: 150px;
+
+//     background: linear-gradient(
+//         70.71deg,
+//         #8f67e2 -11.82%,
+//         #7d89e5 2.93%,
+//         #6aace9 20.96%,
+//         #5ec1eb 35.76%,
+//         #5ac9ec 45.4%,
+//         #51eabd 103.27%
+//     );
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
 
 .hasten h1 {
     font-style: normal;
@@ -178,7 +291,7 @@
     font-size: 40px !important;
     line-height: 56px;
     background-size: 100%;
-    width: 150px;
+    width: fit-content;
 
     background-image: linear-gradient(90.64deg, #8758fe -12.21%, #b264fe 24.49%, #ff78ff 83.26%);
     -webkit-background-clip: text;
@@ -231,6 +344,12 @@
     line-height: 32px;
 }
 
+// .ambal p {
+//     color: white;
+//     font-size: 16px;
+//     line-height: 32px;
+// }
+
 .github-btn {
     // position: absolute;
     // top: 350px;
@@ -253,8 +372,11 @@
     width: 29vw;
     height: 30vw;
     left: 12vw;
-    top: 0vh;
+    // top: 0vh;
     display: inline;
+
+    // top: 16.25%;
+    // bottom: 68.17%;
 }
 
 .chainblocks-image img {
@@ -290,8 +412,10 @@
     width: 40vw;
     height: 30vh;
     left: 23.5vw;
-    // top: 18vh;
-    top: 100px;
+
+    top: 9.5vh;
+    // top: 20vh;
+    // top: 100px;
 }
 
 .clamor h1 {
@@ -328,7 +452,8 @@
     height: 30vh;
     left: 11.5vw;
     // top: 9.5vh;
-    top: 0;
+    // top: 0;
+    top: 9.5vh;
 }
 
 .clamor .image {
@@ -374,6 +499,10 @@
         width: 280px;
     }
 
+    .ambal img {
+        width: 280px;
+    }
+
     .chainblocks .text {
         top: 0;
         // display: inline-block;
@@ -398,12 +527,17 @@
     .hasten .image {
         position: relative;
         left: 52vw;
-        top: 36vw;
+        top: 150px;
         width: 48vw;
     }
 
     .hasten .text {
         left: 10vw;
+        top: 0;
+    }
+
+    .ambal .text {
+        top: 100px;
     }
 
     #hasten-lines {
@@ -411,9 +545,18 @@
         width: min(373px, 100%);
     }
 
+    .ambal img {
+        width: 33vw !important;
+    }
+
     .chainblocks .text {
         left: 10vw;
         width: 53vw;
+    }
+
+    .sound-game .text {
+        width: 40vw;
+        // top: 100px;   
     }
 
     .chainblocks-image {
@@ -425,6 +568,26 @@
         position: relative;
         margin-left: 64vw;
         margin-top: 1vh;
+    }
+
+    .sound-game-tablet {
+        display: inline;
+        margin-left: 17vw;
+        float: right;
+        margin-right: 10vw;
+        top: 150px;
+    }
+
+    .sound-game-tablet img{
+        display: inline;
+    }
+
+    .ambal {
+        height: 500px;
+    }
+
+    .sound-game {
+        height: 500px;
     }
 
     .chainblocks-image-tablet img {
@@ -460,7 +623,8 @@
     .technology-sec h2 {
         width: 62vw;
         // height: fit-content;
-        top: 15vw;
+        top: 0;
+        padding-bottom: 0;
     }
 
     #technology-intro-text {
@@ -469,15 +633,31 @@
     }
 }
 
-@media screen and (max-width: 430px) {
-    .technology-sec h2 {
+@media screen and (max-width: 600px) {
+    .project-sec h2 {
+        font-size: 36px;
+        margin-top: 100px;
         width: 80vw;
+    }
+
+    .sound-game {
+        height: 500px !important;
+    }
+
+    .ambal {
+        height: 500px !important;
+    }
+
+    .technology-sec h2 {
+        width: 90vw;
         // height: 25vh;
-        top: 23vw;
+        // top: 23vw;
+        top: 0;
         font-weight: bold;
         font-size: 40px;
         line-height: 43px;
-        margin-top: 2vw;
+        // margin-top: 2vw;
+        margin-top: 150px;
     }
 
     #technology-intro-text {
@@ -542,6 +722,10 @@
         height: 65vh;
         margin-top: 150px;
     }
+    
+    .sound-game {
+        margin-top: 0;
+    }
 
     .clamor .text {
         left: 5vw;
@@ -585,6 +769,10 @@
         margin-right: auto;
     }
 
+    .technology-sec {
+        display: inline;
+    }
+
     #technology-intro-text {
         width: 1000px;
         line-height: 30px;
@@ -611,9 +799,14 @@
     
     .chainblocks-image {
         left: 7vw;
+        width: fit-content;
     }
 
     .chainblocks .text {
         left: 18.5vw;
+    }
+
+    .triangle-bg-image {
+        height: fit-content;
     }
 }

@@ -4,9 +4,8 @@
 <template>
   <div
     class="mainPage technology-sec"
-    :src="require(`../../asset/figmaElements/background-grid.png`)"
   >
-    <img
+    <!-- <img
       class="star-bg-image"
       :src="require(`../../asset/figmaElements/star_background.png`)"
       alt="Fragcolor Star Background"
@@ -15,29 +14,28 @@
       class="grid-bg-image"
       :src="require(`../../asset/figmaElements/background-grid.png`)"
       alt="Fragcolor Grid Background"
-    />
-    <global-header> </global-header>
+    /> -->
+    <!-- <global-header> </global-header> -->
 
     <div class="body">
-      <social-bar />
+      <!-- <social-bar /> -->
       <!-- <h2>Core Fragments Ecosystem Components</h2> -->
-      <h2>Technology</h2>
+      <h2>Technology we are building</h2>
       <br />
       <br />
 
       <div class="technology hasten">
         <div class="text">
-          <h1>Hasten</h1>
+          <h1>Claymore</h1>
           <h3>
-            Game creation and portal app
+            Online multimedia platform and app
             <!-- Creativity Engine and the first dApp to build apps, games and virtual worlds. -->
           </h3>
           <p>
-            A low code, immediate and batteries included creative framework to build fast
-            and efficient multi-platform applications in the form of distributed digital
-            assets.
+            A creative multi-platform app and framework that allows the swift development and publishing 
+            of games and assets as well as the fruition of content, all in one place.
           </p>
-          <a href="https://github.com/fragcolor-xyz/hasten" target="_blank">
+          <a href="https://github.com/fragcolor-xyz/claymore" target="_blank">
             <githubBtn class="github-btn" />
             <img :src="require(`../../asset/figmaElements/mobile_github_purple_btn.png`)" class="github-btn-mobile" />
           </a>
